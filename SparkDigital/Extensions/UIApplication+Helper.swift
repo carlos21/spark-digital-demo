@@ -15,4 +15,12 @@ extension UIApplication {
     var currentVersion: String? {
         return infoDictionary?["CFBundleShortVersionString"] as? String
     }
+    
+    var isUnitTesting: Bool {
+        #if DEBUG
+        return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+        #else
+        return false
+        #endif
+    }
 }

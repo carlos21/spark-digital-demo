@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		350D91CA25E05A43004A22B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91C925E05A43004A22B6 /* AppDelegate.swift */; };
-		350D91CC25E05A43004A22B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91CB25E05A43004A22B6 /* SceneDelegate.swift */; };
 		350D91D325E05A46004A22B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D91D225E05A46004A22B6 /* Assets.xcassets */; };
 		350D91D625E05A46004A22B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350D91D425E05A46004A22B6 /* LaunchScreen.storyboard */; };
 		350D91E125E05A46004A22B6 /* SparkDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91E025E05A46004A22B6 /* SparkDigitalTests.swift */; };
-		350D91EC25E05A46004A22B6 /* SparkDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91EB25E05A46004A22B6 /* SparkDigitalUITests.swift */; };
 		350D920325E064C8004A22B6 /* InstantiableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D920225E064C8004A22B6 /* InstantiableController.swift */; };
 		350D920925E0651D004A22B6 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350D920825E0651D004A22B6 /* Photos.storyboard */; };
 		350D921125E06527004A22B6 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D921025E06527004A22B6 /* PhotosViewController.swift */; };
@@ -45,9 +43,8 @@
 		350D934525E07B75004A22B6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D934425E07B75004A22B6 /* API.swift */; };
 		350D935D25E07C45004A22B6 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D935C25E07C45004A22B6 /* PhotoResponse.swift */; };
 		350D937C25E0C73E004A22B6 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D924925E06C9E004A22B6 /* PhotosViewModel.swift */; };
-		350D938525E0C945004A22B6 /* GetPhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */; };
 		350D939325E0CB8F004A22B6 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D939225E0CB8F004A22B6 /* AppContainer.swift */; };
-		350D939C25E0CBDF004A22B6 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D939B25E0CBDF004A22B6 /* UIApplication+Version.swift */; };
+		350D939C25E0CBDF004A22B6 /* UIApplication+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D939B25E0CBDF004A22B6 /* UIApplication+Helper.swift */; };
 		350D93AA25E0CCCA004A22B6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93A925E0CCCA004A22B6 /* Environment.swift */; };
 		350D93B225E0E424004A22B6 /* IndicatableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93B125E0E424004A22B6 /* IndicatableController.swift */; };
 		350D93BB25E0E44B004A22B6 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93BA25E0E44B004A22B6 /* IndicatorView.swift */; };
@@ -63,7 +60,6 @@
 		35E0ECEE25E22F3B00FC0747 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ECED25E22F3B00FC0747 /* PhotoDetailViewModel.swift */; };
 		35E0ECF625E22F5900FC0747 /* PhotoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ECF525E22F5900FC0747 /* PhotoVM.swift */; };
 		35E0ED0425E22FAF00FC0747 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ED0325E22FAF00FC0747 /* State.swift */; };
-		35E0ED1225E2340F00FC0747 /* DownloadImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ED1125E2340F00FC0747 /* DownloadImageUseCase.swift */; };
 		35EA4E2A25E1C32500A9DFB4 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */; };
 		35EA4E3825E1C33100A9DFB4 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */; };
 		35EA4E4025E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */; };
@@ -71,20 +67,14 @@
 		35EA4E6125E1CFB100A9DFB4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E6025E1CFB100A9DFB4 /* PhotoDetailViewController.swift */; };
 		35EA4E7525E1D80900A9DFB4 /* PhotosPageContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */; };
 		35EA4E7D25E1D8B000A9DFB4 /* PhotoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA4E7C25E1D8B000A9DFB4 /* PhotoDetail.storyboard */; };
-		72489922C51C3A730C812AB8 /* Pods_SparkDigital_SparkDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D807CFFB3EF77655996A5225 /* Pods_SparkDigital_SparkDigitalUITests.framework */; };
+		35EC6BDD25E2DD4E007E1A1C /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC6BDC25E2DD4E007E1A1C /* PhotosRepository.swift */; };
+		35EC6BE525E2DD85007E1A1C /* PhotosRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC6BE425E2DD85007E1A1C /* PhotosRepositoryProtocol.swift */; };
 		7F58F102502E839E29CDAB8E /* Pods_SparkDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3503474E14F76F6F9CC283A3 /* Pods_SparkDigitalTests.framework */; };
 		D5E2CB18F5FCDB5B16150C98 /* Pods_SparkDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6492CBDC182217D400DCC0BE /* Pods_SparkDigital.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		350D91DD25E05A46004A22B6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 350D91C525E05A43004A22B6;
-			remoteInfo = SparkDigital;
-		};
-		350D91E825E05A46004A22B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
 			proxyType = 1;
@@ -156,16 +146,12 @@
 		3503474E14F76F6F9CC283A3 /* Pods_SparkDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D91C625E05A43004A22B6 /* SparkDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D91C925E05A43004A22B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		350D91CB25E05A43004A22B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		350D91D225E05A46004A22B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		350D91D525E05A46004A22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		350D91D725E05A46004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350D91DC25E05A46004A22B6 /* SparkDigitalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkDigitalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D91E025E05A46004A22B6 /* SparkDigitalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDigitalTests.swift; sourceTree = "<group>"; };
 		350D91E225E05A46004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		350D91E725E05A46004A22B6 /* SparkDigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkDigitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		350D91EB25E05A46004A22B6 /* SparkDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDigitalUITests.swift; sourceTree = "<group>"; };
-		350D91ED25E05A46004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350D920225E064C8004A22B6 /* InstantiableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiableController.swift; sourceTree = "<group>"; };
 		350D920825E0651D004A22B6 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		350D921025E06527004A22B6 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -200,9 +186,8 @@
 		350D933C25E079DF004A22B6 /* DelegatedCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedCall.swift; sourceTree = "<group>"; };
 		350D934425E07B75004A22B6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		350D935C25E07C45004A22B6 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
-		350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotosUseCase.swift; sourceTree = "<group>"; };
 		350D939225E0CB8F004A22B6 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		350D939B25E0CBDF004A22B6 /* UIApplication+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
+		350D939B25E0CBDF004A22B6 /* UIApplication+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Helper.swift"; sourceTree = "<group>"; };
 		350D93A925E0CCCA004A22B6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		350D93B125E0E424004A22B6 /* IndicatableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatableController.swift; sourceTree = "<group>"; };
 		350D93BA25E0E44B004A22B6 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -218,7 +203,6 @@
 		35E0ECED25E22F3B00FC0747 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
 		35E0ECF525E22F5900FC0747 /* PhotoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVM.swift; sourceTree = "<group>"; };
 		35E0ED0325E22FAF00FC0747 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		35E0ED1125E2340F00FC0747 /* DownloadImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageUseCase.swift; sourceTree = "<group>"; };
 		35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
 		35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
@@ -226,6 +210,8 @@
 		35EA4E6025E1CFB100A9DFB4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotosPageContainer.storyboard; sourceTree = "<group>"; };
 		35EA4E7C25E1D8B000A9DFB4 /* PhotoDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoDetail.storyboard; sourceTree = "<group>"; };
+		35EC6BDC25E2DD4E007E1A1C /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
+		35EC6BE425E2DD85007E1A1C /* PhotosRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepositoryProtocol.swift; sourceTree = "<group>"; };
 		46B568452C1AC53FC04DD3F6 /* Pods-SparkDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital.debug.xcconfig"; path = "Target Support Files/Pods-SparkDigital/Pods-SparkDigital.debug.xcconfig"; sourceTree = "<group>"; };
 		5B2229CA0DDD33B54C58FCE5 /* Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig"; path = "Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DD53DC3C170F2C19B234174 /* Pods-SparkDigital-SparkDigitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital-SparkDigitalUITests.release.xcconfig"; path = "Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,14 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F58F102502E839E29CDAB8E /* Pods_SparkDigitalTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		350D91E425E05A46004A22B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72489922C51C3A730C812AB8 /* Pods_SparkDigital_SparkDigitalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +278,6 @@
 				350D91C825E05A43004A22B6 /* SparkDigital */,
 				350D931A25E079BD004A22B6 /* PresentationLogic */,
 				350D91DF25E05A46004A22B6 /* SparkDigitalTests */,
-				350D91EA25E05A46004A22B6 /* SparkDigitalUITests */,
 				350D925525E07081004A22B6 /* Core */,
 				350D926225E07081004A22B6 /* CoreTests */,
 				350D932725E079BD004A22B6 /* PresentationLogicTests */,
@@ -315,7 +292,6 @@
 			children = (
 				350D91C625E05A43004A22B6 /* SparkDigital.app */,
 				350D91DC25E05A46004A22B6 /* SparkDigitalTests.xctest */,
-				350D91E725E05A46004A22B6 /* SparkDigitalUITests.xctest */,
 				350D925425E07081004A22B6 /* Core.framework */,
 				350D925C25E07081004A22B6 /* CoreTests.xctest */,
 				350D931925E079BD004A22B6 /* PresentationLogic.framework */,
@@ -331,7 +307,6 @@
 				350D93B925E0E441004A22B6 /* Common */,
 				350D939A25E0CBB1004A22B6 /* Extensions */,
 				350D91C925E05A43004A22B6 /* AppDelegate.swift */,
-				350D91CB25E05A43004A22B6 /* SceneDelegate.swift */,
 				350D923825E068C8004A22B6 /* R.generated.swift */,
 				350D91D225E05A46004A22B6 /* Assets.xcassets */,
 				350D91D425E05A46004A22B6 /* LaunchScreen.storyboard */,
@@ -353,15 +328,6 @@
 			path = SparkDigitalTests;
 			sourceTree = "<group>";
 		};
-		350D91EA25E05A46004A22B6 /* SparkDigitalUITests */ = {
-			isa = PBXGroup;
-			children = (
-				350D91EB25E05A46004A22B6 /* SparkDigitalUITests.swift */,
-				350D91ED25E05A46004A22B6 /* Info.plist */,
-			);
-			path = SparkDigitalUITests;
-			sourceTree = "<group>";
-		};
 		350D920725E064D5004A22B6 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +341,7 @@
 		350D925525E07081004A22B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				350D938325E0C92F004A22B6 /* UseCases */,
+				35EC6BDB25E2DD40007E1A1C /* Repositories */,
 				350D935B25E07C16004A22B6 /* Responses */,
 				350D92AC25E0745D004A22B6 /* Extensions */,
 				350D928025E073B1004A22B6 /* Network */,
@@ -455,19 +421,10 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
-		350D938325E0C92F004A22B6 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */,
-				35E0ED1125E2340F00FC0747 /* DownloadImageUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		350D939A25E0CBB1004A22B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				350D939B25E0CBDF004A22B6 /* UIApplication+Version.swift */,
+				350D939B25E0CBDF004A22B6 /* UIApplication+Helper.swift */,
 				350D93D625E0E4DE004A22B6 /* UIView+Animations.swift */,
 			);
 			path = Extensions;
@@ -532,6 +489,15 @@
 				35EA4E7C25E1D8B000A9DFB4 /* PhotoDetail.storyboard */,
 			);
 			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		35EC6BDB25E2DD40007E1A1C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				35EC6BDC25E2DD4E007E1A1C /* PhotosRepository.swift */,
+				35EC6BE425E2DD85007E1A1C /* PhotosRepositoryProtocol.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		68B6F376167FAB2CA534D0C1 /* Pods */ = {
@@ -620,26 +586,6 @@
 			productName = SparkDigitalTests;
 			productReference = 350D91DC25E05A46004A22B6 /* SparkDigitalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		350D91E625E05A46004A22B6 /* SparkDigitalUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 350D91F625E05A46004A22B6 /* Build configuration list for PBXNativeTarget "SparkDigitalUITests" */;
-			buildPhases = (
-				D5FCFDBC9CFEAED85FB30D46 /* [CP] Check Pods Manifest.lock */,
-				350D91E325E05A46004A22B6 /* Sources */,
-				350D91E425E05A46004A22B6 /* Frameworks */,
-				350D91E525E05A46004A22B6 /* Resources */,
-				1B36240767D2AD32F3F94027 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				350D91E925E05A46004A22B6 /* PBXTargetDependency */,
-			);
-			name = SparkDigitalUITests;
-			productName = SparkDigitalUITests;
-			productReference = 350D91E725E05A46004A22B6 /* SparkDigitalUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		350D925325E07081004A22B6 /* Core */ = {
 			isa = PBXNativeTarget;
@@ -731,10 +677,6 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 350D91C525E05A43004A22B6;
 					};
-					350D91E625E05A46004A22B6 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 350D91C525E05A43004A22B6;
-					};
 					350D925325E07081004A22B6 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -767,7 +709,6 @@
 			targets = (
 				350D91C525E05A43004A22B6 /* SparkDigital */,
 				350D91DB25E05A46004A22B6 /* SparkDigitalTests */,
-				350D91E625E05A46004A22B6 /* SparkDigitalUITests */,
 				350D925325E07081004A22B6 /* Core */,
 				350D925B25E07081004A22B6 /* CoreTests */,
 				350D931825E079BD004A22B6 /* PresentationLogic */,
@@ -791,13 +732,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		350D91DA25E05A46004A22B6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		350D91E525E05A46004A22B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -855,23 +789,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1B36240767D2AD32F3F94027 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		350D922125E0679B004A22B6 /* Rswift */ = {
@@ -933,28 +850,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5FCFDBC9CFEAED85FB30D46 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SparkDigital-SparkDigitalUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -971,7 +866,6 @@
 				350D91CA25E05A43004A22B6 /* AppDelegate.swift in Sources */,
 				350D93B225E0E424004A22B6 /* IndicatableController.swift in Sources */,
 				350D940125E0EA6B004A22B6 /* FlexibleCollectionView.swift in Sources */,
-				350D91CC25E05A43004A22B6 /* SceneDelegate.swift in Sources */,
 				350D93F025E0E8BB004A22B6 /* PhotoCell.swift in Sources */,
 				350D93C325E0E480004A22B6 /* NibDesignableView.swift in Sources */,
 				350D93BB25E0E44B004A22B6 /* IndicatorView.swift in Sources */,
@@ -982,7 +876,7 @@
 				35EA4E2A25E1C32500A9DFB4 /* ZoomTransitionController.swift in Sources */,
 				350D939325E0CB8F004A22B6 /* AppContainer.swift in Sources */,
 				350D93FF25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift in Sources */,
-				350D939C25E0CBDF004A22B6 /* UIApplication+Version.swift in Sources */,
+				350D939C25E0CBDF004A22B6 /* UIApplication+Helper.swift in Sources */,
 				350D93D725E0E4DE004A22B6 /* UIView+Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,20 +889,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		350D91E325E05A46004A22B6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				350D91EC25E05A46004A22B6 /* SparkDigitalUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		350D925025E07081004A22B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				350D92AE25E0747E004A22B6 /* DateFormatter.swift in Sources */,
-				350D938525E0C945004A22B6 /* GetPhotosUseCase.swift in Sources */,
+				35EC6BDD25E2DD4E007E1A1C /* PhotosRepository.swift in Sources */,
 				350D929C25E073B1004A22B6 /* NetworkConfig.swift in Sources */,
 				350D92A725E07439004A22B6 /* Date.swift in Sources */,
 				350D929125E073B1004A22B6 /* DataTransferService.swift in Sources */,
@@ -1017,11 +903,11 @@
 				350D929525E073B1004A22B6 /* HTTPMethod.swift in Sources */,
 				350D935D25E07C45004A22B6 /* PhotoResponse.swift in Sources */,
 				350D929B25E073B1004A22B6 /* Endpoint.swift in Sources */,
-				35E0ED1225E2340F00FC0747 /* DownloadImageUseCase.swift in Sources */,
 				350D929025E073B1004A22B6 /* Error.swift in Sources */,
 				350D929225E073B1004A22B6 /* NetworkService.swift in Sources */,
 				350D929A25E073B1004A22B6 /* Decoders.swift in Sources */,
 				350D93AA25E0CCCA004A22B6 /* Environment.swift in Sources */,
+				35EC6BE525E2DD85007E1A1C /* PhotosRepositoryProtocol.swift in Sources */,
 				350D929725E073B1004A22B6 /* DataTransferErrorLogger.swift in Sources */,
 				350D928F25E073B1004A22B6 /* Requestable.swift in Sources */,
 				350D929825E073B1004A22B6 /* DataTransferErrorResolver.swift in Sources */,
@@ -1064,11 +950,6 @@
 			isa = PBXTargetDependency;
 			target = 350D91C525E05A43004A22B6 /* SparkDigital */;
 			targetProxy = 350D91DD25E05A46004A22B6 /* PBXContainerItemProxy */;
-		};
-		350D91E925E05A46004A22B6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 350D91C525E05A43004A22B6 /* SparkDigital */;
-			targetProxy = 350D91E825E05A46004A22B6 /* PBXContainerItemProxy */;
 		};
 		350D925F25E07081004A22B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1328,48 +1209,6 @@
 			};
 			name = Release;
 		};
-		350D91F725E05A46004A22B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B2229CA0DDD33B54C58FCE5 /* Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RH4PC25J9C;
-				INFOPLIST_FILE = SparkDigitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.SparkDigitalUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SparkDigital;
-			};
-			name = Debug;
-		};
-		350D91F825E05A46004A22B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DD53DC3C170F2C19B234174 /* Pods-SparkDigital-SparkDigitalUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RH4PC25J9C;
-				INFOPLIST_FILE = SparkDigitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.SparkDigitalUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SparkDigital;
-			};
-			name = Release;
-		};
 		350D926C25E07081004A22B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1591,15 +1430,6 @@
 			buildConfigurations = (
 				350D91F425E05A46004A22B6 /* Debug */,
 				350D91F525E05A46004A22B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		350D91F625E05A46004A22B6 /* Build configuration list for PBXNativeTarget "SparkDigitalUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				350D91F725E05A46004A22B6 /* Debug */,
-				350D91F825E05A46004A22B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

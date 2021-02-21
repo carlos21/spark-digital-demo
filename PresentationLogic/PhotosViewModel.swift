@@ -12,18 +12,15 @@ public class PhotosViewModel {
     
     // MARK: - Properties
     
-    public var getListUseCase: GetPhotosUseCase
-    public var downloadImageUseCase: DownloadImageUseCase
+    private var photosRepository: PhotosRepositoryProtocol
     public var state = DelegatedCall<ListState>()
     public var photoUpdated = DelegatedCall<(photo: PhotoVM, indexPath: IndexPath)>()
     public var photos = [PhotoVM]()
     
     // MARK: - Init
     
-    public init(getListUseCase: GetPhotosUseCase,
-                downloadImageUseCase: DownloadImageUseCase) {
-        self.getListUseCase = getListUseCase
-        self.downloadImageUseCase = downloadImageUseCase
+    public init(photosRepository: PhotosRepositoryProtocol) {
+        self.photosRepository = photosRepository
     }
     
     // MARK: - Functions
@@ -32,7 +29,7 @@ public class PhotosViewModel {
         if type == .firstTimeLoad {
             state.callback?(.loading)
         }
-        getListUseCase.getPhotos { [weak self] result in
+        photosRepository.getPhotos { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let photos):
@@ -55,7 +52,7 @@ public class PhotosViewModel {
         guard photo.thumbnailState.shouldDownload else { return }
         
         photo.thumbnailState = .loading
-        downloadImageUseCase.downloadPhoto(path: photo.thumbnailUrl) { [weak self] result in
+        photosRepository.downloadPhoto(path: photo.thumbnailUrl) { [weak self] result in
             switch result {
             case .success(let data):
                 photo.thumbnailState = .success(data)

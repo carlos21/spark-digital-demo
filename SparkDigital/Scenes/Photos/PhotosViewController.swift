@@ -23,9 +23,8 @@ final class PhotosViewController: UIViewController, IndicatableController {
     
     lazy var viewModel: PhotosViewModel = {
         let transferService = AppContainer.shared.dataTransferService
-        let getPhotosUseCase = GetPhotosUseCase(transferService: transferService)
-        let downloadImageUseCase = DownloadImageUseCase(transferService: transferService)
-        return PhotosViewModel(getListUseCase: getPhotosUseCase, downloadImageUseCase: downloadImageUseCase)
+        let photosRepository = PhotosRepository(transferService: transferService)
+        return PhotosViewModel(photosRepository: photosRepository)
     }()
     
     lazy var refreshControl: UIRefreshControl = {
@@ -105,6 +104,13 @@ final class PhotosViewController: UIViewController, IndicatableController {
     
     @objc private func didPullToRefresh() {
         viewModel.loadData(type: .pullToRefresh)
+    }
+}
+
+extension PhotosViewController: InstantiableController {
+    
+    static func instance() -> PhotosViewController {
+        return R.storyboard.photos.instantiateInitialViewController()!
     }
 }
 

@@ -12,14 +12,14 @@ public class PhotoDetailViewModel {
     
     // MARK: - Properties
     
-    public var downloadImageUseCase: DownloadImageUseCase
+    private var photosRepository: PhotosRepositoryProtocol
     public var photoUpdated = DelegatedCall<PhotoVM>()
     public var photo: PhotoVM?
     
     // MARK: - Init
     
-    public init(downloadImageUseCase: DownloadImageUseCase) {
-        self.downloadImageUseCase = downloadImageUseCase
+    public init(photosRepository: PhotosRepositoryProtocol) {
+        self.photosRepository = photosRepository
     }
     
     public func download() {
@@ -33,7 +33,7 @@ public class PhotoDetailViewModel {
         }
         
         photo.bigImageState = .loading
-        downloadImageUseCase.downloadPhoto(path: photo.url) { [weak self] result in
+        photosRepository.downloadPhoto(path: photo.url) { [weak self] result in
             switch result {
             case .success(let data):
                 photo.bigImageState = .success(data)

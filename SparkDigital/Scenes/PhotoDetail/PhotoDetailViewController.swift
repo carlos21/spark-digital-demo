@@ -27,8 +27,8 @@ final class PhotoDetailViewController: UIViewController {
     
     lazy var viewModel: PhotoDetailViewModel = {
         let transferService = AppContainer.shared.dataTransferService
-        let downloadImageUseCase = DownloadImageUseCase(transferService: transferService)
-        return PhotoDetailViewModel(downloadImageUseCase: downloadImageUseCase)
+        let photosRepository = PhotosRepository(transferService: transferService)
+        return PhotoDetailViewModel(photosRepository: photosRepository)
     }()
     
     // MARK: - Functions
