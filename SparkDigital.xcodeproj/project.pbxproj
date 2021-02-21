@@ -3,18 +3,73 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		350D91CA25E05A43004A22B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91C925E05A43004A22B6 /* AppDelegate.swift */; };
 		350D91CC25E05A43004A22B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91CB25E05A43004A22B6 /* SceneDelegate.swift */; };
-		350D91CE25E05A43004A22B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91CD25E05A43004A22B6 /* ViewController.swift */; };
-		350D91D125E05A43004A22B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350D91CF25E05A43004A22B6 /* Main.storyboard */; };
 		350D91D325E05A46004A22B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D91D225E05A46004A22B6 /* Assets.xcassets */; };
 		350D91D625E05A46004A22B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350D91D425E05A46004A22B6 /* LaunchScreen.storyboard */; };
 		350D91E125E05A46004A22B6 /* SparkDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91E025E05A46004A22B6 /* SparkDigitalTests.swift */; };
 		350D91EC25E05A46004A22B6 /* SparkDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D91EB25E05A46004A22B6 /* SparkDigitalUITests.swift */; };
+		350D920325E064C8004A22B6 /* InstantiableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D920225E064C8004A22B6 /* InstantiableController.swift */; };
+		350D920925E0651D004A22B6 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350D920825E0651D004A22B6 /* Photos.storyboard */; };
+		350D921125E06527004A22B6 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D921025E06527004A22B6 /* PhotosViewController.swift */; };
+		350D923925E068C8004A22B6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D923825E068C8004A22B6 /* R.generated.swift */; };
+		350D925D25E07081004A22B6 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350D925425E07081004A22B6 /* Core.framework */; };
+		350D926425E07081004A22B6 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D926325E07081004A22B6 /* CoreTests.swift */; };
+		350D926625E07081004A22B6 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 350D925625E07081004A22B6 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		350D926925E07081004A22B6 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350D925425E07081004A22B6 /* Core.framework */; };
+		350D926A25E07081004A22B6 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 350D925425E07081004A22B6 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		350D928F25E073B1004A22B6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928125E073B1004A22B6 /* Requestable.swift */; };
+		350D929025E073B1004A22B6 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928225E073B1004A22B6 /* Error.swift */; };
+		350D929125E073B1004A22B6 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928325E073B1004A22B6 /* DataTransferService.swift */; };
+		350D929225E073B1004A22B6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928425E073B1004A22B6 /* NetworkService.swift */; };
+		350D929325E073B1004A22B6 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928525E073B1004A22B6 /* JSON.swift */; };
+		350D929525E073B1004A22B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928725E073B1004A22B6 /* HTTPMethod.swift */; };
+		350D929725E073B1004A22B6 /* DataTransferErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928925E073B1004A22B6 /* DataTransferErrorLogger.swift */; };
+		350D929825E073B1004A22B6 /* DataTransferErrorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928A25E073B1004A22B6 /* DataTransferErrorResolver.swift */; };
+		350D929925E073B1004A22B6 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928B25E073B1004A22B6 /* NetworkLogger.swift */; };
+		350D929A25E073B1004A22B6 /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928C25E073B1004A22B6 /* Decoders.swift */; };
+		350D929B25E073B1004A22B6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928D25E073B1004A22B6 /* Endpoint.swift */; };
+		350D929C25E073B1004A22B6 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D928E25E073B1004A22B6 /* NetworkConfig.swift */; };
+		350D92A725E07439004A22B6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D92A625E07439004A22B6 /* Date.swift */; };
+		350D92AE25E0747E004A22B6 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D92AD25E0747E004A22B6 /* DateFormatter.swift */; };
+		350D932225E079BD004A22B6 /* PresentationLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350D931925E079BD004A22B6 /* PresentationLogic.framework */; };
+		350D932925E079BD004A22B6 /* PresentationLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D932825E079BD004A22B6 /* PresentationLogicTests.swift */; };
+		350D932B25E079BD004A22B6 /* PresentationLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 350D931B25E079BD004A22B6 /* PresentationLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		350D932E25E079BD004A22B6 /* PresentationLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350D931925E079BD004A22B6 /* PresentationLogic.framework */; };
+		350D932F25E079BD004A22B6 /* PresentationLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 350D931925E079BD004A22B6 /* PresentationLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		350D933D25E079DF004A22B6 /* DelegatedCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D933C25E079DF004A22B6 /* DelegatedCall.swift */; };
+		350D934525E07B75004A22B6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D934425E07B75004A22B6 /* API.swift */; };
+		350D935D25E07C45004A22B6 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D935C25E07C45004A22B6 /* PhotoResponse.swift */; };
+		350D937C25E0C73E004A22B6 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D924925E06C9E004A22B6 /* PhotosViewModel.swift */; };
+		350D938525E0C945004A22B6 /* GetPhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */; };
+		350D939325E0CB8F004A22B6 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D939225E0CB8F004A22B6 /* AppContainer.swift */; };
+		350D939C25E0CBDF004A22B6 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D939B25E0CBDF004A22B6 /* UIApplication+Version.swift */; };
+		350D93AA25E0CCCA004A22B6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93A925E0CCCA004A22B6 /* Environment.swift */; };
+		350D93B225E0E424004A22B6 /* IndicatableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93B125E0E424004A22B6 /* IndicatableController.swift */; };
+		350D93BB25E0E44B004A22B6 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93BA25E0E44B004A22B6 /* IndicatorView.swift */; };
+		350D93C325E0E480004A22B6 /* NibDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93C225E0E480004A22B6 /* NibDesignableView.swift */; };
+		350D93D725E0E4DE004A22B6 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93D625E0E4DE004A22B6 /* UIView+Animations.swift */; };
+		350D93E625E0E6D1004A22B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 350D93E825E0E6D1004A22B6 /* Localizable.strings */; };
+		350D93F025E0E8BB004A22B6 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93EF25E0E8BB004A22B6 /* PhotoCell.swift */; };
+		350D93FD25E0EA6B004A22B6 /* FlexibleBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93F825E0EA6B004A22B6 /* FlexibleBaseCell.swift */; };
+		350D93FE25E0EA6B004A22B6 /* UIRectCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93F925E0EA6B004A22B6 /* UIRectCorner.swift */; };
+		350D93FF25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93FA25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift */; };
+		350D940025E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93FB25E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift */; };
+		350D940125E0EA6B004A22B6 /* FlexibleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93FC25E0EA6B004A22B6 /* FlexibleCollectionView.swift */; };
+		35EA4E2A25E1C32500A9DFB4 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */; };
+		35EA4E3825E1C33100A9DFB4 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */; };
+		35EA4E4025E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */; };
+		35EA4E4A25E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E4925E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift */; };
+		35EA4E6125E1CFB100A9DFB4 /* PhotoZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E6025E1CFB100A9DFB4 /* PhotoZoomViewController.swift */; };
+		35EA4E7525E1D80900A9DFB4 /* PhotosPageContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */; };
+		35EA4E7D25E1D8B000A9DFB4 /* PhotoZoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA4E7C25E1D8B000A9DFB4 /* PhotoZoom.storyboard */; };
+		72489922C51C3A730C812AB8 /* Pods_SparkDigital_SparkDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D807CFFB3EF77655996A5225 /* Pods_SparkDigital_SparkDigitalUITests.framework */; };
+		7F58F102502E839E29CDAB8E /* Pods_SparkDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3503474E14F76F6F9CC283A3 /* Pods_SparkDigitalTests.framework */; };
+		D5E2CB18F5FCDB5B16150C98 /* Pods_SparkDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6492CBDC182217D400DCC0BE /* Pods_SparkDigital.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +87,72 @@
 			remoteGlobalIDString = 350D91C525E05A43004A22B6;
 			remoteInfo = SparkDigital;
 		};
+		350D925E25E07081004A22B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350D925325E07081004A22B6;
+			remoteInfo = Core;
+		};
+		350D926025E07081004A22B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350D91C525E05A43004A22B6;
+			remoteInfo = SparkDigital;
+		};
+		350D926725E07081004A22B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350D925325E07081004A22B6;
+			remoteInfo = Core;
+		};
+		350D932325E079BD004A22B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350D931825E079BD004A22B6;
+			remoteInfo = PresentationLogic;
+		};
+		350D932525E079BD004A22B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350D91C525E05A43004A22B6;
+			remoteInfo = SparkDigital;
+		};
+		350D932C25E079BD004A22B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 350D91BE25E05A43004A22B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350D931825E079BD004A22B6;
+			remoteInfo = PresentationLogic;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		350D926E25E07081004A22B6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				350D926A25E07081004A22B6 /* Core.framework in Embed Frameworks */,
+				350D932F25E079BD004A22B6 /* PresentationLogic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		13402DD8E5B6604C60AAEE26 /* Pods-SparkDigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigitalTests.debug.xcconfig"; path = "Target Support Files/Pods-SparkDigitalTests/Pods-SparkDigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F817D42283723BDAA579A8C /* Pods-SparkDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital.release.xcconfig"; path = "Target Support Files/Pods-SparkDigital/Pods-SparkDigital.release.xcconfig"; sourceTree = "<group>"; };
+		3503474E14F76F6F9CC283A3 /* Pods_SparkDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D91C625E05A43004A22B6 /* SparkDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D91C925E05A43004A22B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		350D91CB25E05A43004A22B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		350D91CD25E05A43004A22B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		350D91D025E05A43004A22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		350D91D225E05A46004A22B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		350D91D525E05A46004A22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		350D91D725E05A46004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +162,68 @@
 		350D91E725E05A46004A22B6 /* SparkDigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkDigitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D91EB25E05A46004A22B6 /* SparkDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDigitalUITests.swift; sourceTree = "<group>"; };
 		350D91ED25E05A46004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350D920225E064C8004A22B6 /* InstantiableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiableController.swift; sourceTree = "<group>"; };
+		350D920825E0651D004A22B6 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		350D921025E06527004A22B6 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		350D923825E068C8004A22B6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		350D924925E06C9E004A22B6 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		350D925425E07081004A22B6 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		350D925625E07081004A22B6 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		350D925725E07081004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350D925C25E07081004A22B6 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		350D926325E07081004A22B6 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		350D926525E07081004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350D928125E073B1004A22B6 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		350D928225E073B1004A22B6 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		350D928325E073B1004A22B6 /* DataTransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		350D928425E073B1004A22B6 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		350D928525E073B1004A22B6 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		350D928725E073B1004A22B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		350D928925E073B1004A22B6 /* DataTransferErrorLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferErrorLogger.swift; sourceTree = "<group>"; };
+		350D928A25E073B1004A22B6 /* DataTransferErrorResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferErrorResolver.swift; sourceTree = "<group>"; };
+		350D928B25E073B1004A22B6 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		350D928C25E073B1004A22B6 /* Decoders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
+		350D928D25E073B1004A22B6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		350D928E25E073B1004A22B6 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		350D92A625E07439004A22B6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		350D92AD25E0747E004A22B6 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		350D931925E079BD004A22B6 /* PresentationLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PresentationLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		350D931B25E079BD004A22B6 /* PresentationLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentationLogic.h; sourceTree = "<group>"; };
+		350D931C25E079BD004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350D932125E079BD004A22B6 /* PresentationLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		350D932825E079BD004A22B6 /* PresentationLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLogicTests.swift; sourceTree = "<group>"; };
+		350D932A25E079BD004A22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350D933C25E079DF004A22B6 /* DelegatedCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedCall.swift; sourceTree = "<group>"; };
+		350D934425E07B75004A22B6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		350D935C25E07C45004A22B6 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotosUseCase.swift; sourceTree = "<group>"; };
+		350D939225E0CB8F004A22B6 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		350D939B25E0CBDF004A22B6 /* UIApplication+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
+		350D93A925E0CCCA004A22B6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		350D93B125E0E424004A22B6 /* IndicatableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatableController.swift; sourceTree = "<group>"; };
+		350D93BA25E0E44B004A22B6 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		350D93C225E0E480004A22B6 /* NibDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignableView.swift; sourceTree = "<group>"; };
+		350D93D625E0E4DE004A22B6 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		350D93E725E0E6D1004A22B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		350D93EF25E0E8BB004A22B6 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		350D93F825E0EA6B004A22B6 /* FlexibleBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleBaseCell.swift; sourceTree = "<group>"; };
+		350D93F925E0EA6B004A22B6 /* UIRectCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRectCorner.swift; sourceTree = "<group>"; };
+		350D93FA25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		350D93FB25E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleCollectionViewLayout.swift; sourceTree = "<group>"; };
+		350D93FC25E0EA6B004A22B6 /* FlexibleCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleCollectionView.swift; sourceTree = "<group>"; };
+		35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
+		35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
+		35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
+		35EA4E4925E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPageContainerViewController.swift; sourceTree = "<group>"; };
+		35EA4E6025E1CFB100A9DFB4 /* PhotoZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoZoomViewController.swift; sourceTree = "<group>"; };
+		35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotosPageContainer.storyboard; sourceTree = "<group>"; };
+		35EA4E7C25E1D8B000A9DFB4 /* PhotoZoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoZoom.storyboard; sourceTree = "<group>"; };
+		46B568452C1AC53FC04DD3F6 /* Pods-SparkDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital.debug.xcconfig"; path = "Target Support Files/Pods-SparkDigital/Pods-SparkDigital.debug.xcconfig"; sourceTree = "<group>"; };
+		5B2229CA0DDD33B54C58FCE5 /* Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig"; path = "Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DD53DC3C170F2C19B234174 /* Pods-SparkDigital-SparkDigitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigital-SparkDigitalUITests.release.xcconfig"; path = "Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6492CBDC182217D400DCC0BE /* Pods_SparkDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4FD08F9F67D78F155A755E9 /* Pods-SparkDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDigitalTests.release.xcconfig"; path = "Target Support Files/Pods-SparkDigitalTests/Pods-SparkDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
+		D807CFFB3EF77655996A5225 /* Pods_SparkDigital_SparkDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkDigital_SparkDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +231,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				350D926925E07081004A22B6 /* Core.framework in Frameworks */,
+				350D932E25E079BD004A22B6 /* PresentationLogic.framework in Frameworks */,
+				D5E2CB18F5FCDB5B16150C98 /* Pods_SparkDigital.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F58F102502E839E29CDAB8E /* Pods_SparkDigitalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +249,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72489922C51C3A730C812AB8 /* Pods_SparkDigital_SparkDigitalUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D925125E07081004A22B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D925925E07081004A22B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D925D25E07081004A22B6 /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931625E079BD004A22B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931E25E079BD004A22B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D932225E079BD004A22B6 /* PresentationLogic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +290,15 @@
 			isa = PBXGroup;
 			children = (
 				350D91C825E05A43004A22B6 /* SparkDigital */,
+				350D931A25E079BD004A22B6 /* PresentationLogic */,
 				350D91DF25E05A46004A22B6 /* SparkDigitalTests */,
 				350D91EA25E05A46004A22B6 /* SparkDigitalUITests */,
+				350D925525E07081004A22B6 /* Core */,
+				350D926225E07081004A22B6 /* CoreTests */,
+				350D932725E079BD004A22B6 /* PresentationLogicTests */,
 				350D91C725E05A43004A22B6 /* Products */,
+				68B6F376167FAB2CA534D0C1 /* Pods */,
+				DBAC38838C5327F5E911B034 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +308,10 @@
 				350D91C625E05A43004A22B6 /* SparkDigital.app */,
 				350D91DC25E05A46004A22B6 /* SparkDigitalTests.xctest */,
 				350D91E725E05A46004A22B6 /* SparkDigitalUITests.xctest */,
+				350D925425E07081004A22B6 /* Core.framework */,
+				350D925C25E07081004A22B6 /* CoreTests.xctest */,
+				350D931925E079BD004A22B6 /* PresentationLogic.framework */,
+				350D932125E079BD004A22B6 /* PresentationLogicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +319,19 @@
 		350D91C825E05A43004A22B6 /* SparkDigital */ = {
 			isa = PBXGroup;
 			children = (
+				35EA4E4725E1CE8B00A9DFB4 /* Scenes */,
+				350D93B925E0E441004A22B6 /* Common */,
+				350D939A25E0CBB1004A22B6 /* Extensions */,
 				350D91C925E05A43004A22B6 /* AppDelegate.swift */,
 				350D91CB25E05A43004A22B6 /* SceneDelegate.swift */,
-				350D91CD25E05A43004A22B6 /* ViewController.swift */,
-				350D91CF25E05A43004A22B6 /* Main.storyboard */,
+				350D923825E068C8004A22B6 /* R.generated.swift */,
 				350D91D225E05A46004A22B6 /* Assets.xcassets */,
 				350D91D425E05A46004A22B6 /* LaunchScreen.storyboard */,
 				350D91D725E05A46004A22B6 /* Info.plist */,
+				350D920225E064C8004A22B6 /* InstantiableController.swift */,
+				350D939225E0CB8F004A22B6 /* AppContainer.swift */,
+				350D93B125E0E424004A22B6 /* IndicatableController.swift */,
+				350D93E825E0E6D1004A22B6 /* Localizable.strings */,
 			);
 			path = SparkDigital;
 			sourceTree = "<group>";
@@ -128,20 +354,236 @@
 			path = SparkDigitalUITests;
 			sourceTree = "<group>";
 		};
+		350D920725E064D5004A22B6 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				350D920825E0651D004A22B6 /* Photos.storyboard */,
+				350D921025E06527004A22B6 /* PhotosViewController.swift */,
+				350D93EF25E0E8BB004A22B6 /* PhotoCell.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		350D925525E07081004A22B6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				350D938325E0C92F004A22B6 /* UseCases */,
+				350D935B25E07C16004A22B6 /* Responses */,
+				350D92AC25E0745D004A22B6 /* Extensions */,
+				350D928025E073B1004A22B6 /* Network */,
+				350D925625E07081004A22B6 /* Core.h */,
+				350D925725E07081004A22B6 /* Info.plist */,
+				350D934425E07B75004A22B6 /* API.swift */,
+				350D93A925E0CCCA004A22B6 /* Environment.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		350D926225E07081004A22B6 /* CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				350D926325E07081004A22B6 /* CoreTests.swift */,
+				350D926525E07081004A22B6 /* Info.plist */,
+			);
+			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		350D928025E073B1004A22B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				350D928125E073B1004A22B6 /* Requestable.swift */,
+				350D928225E073B1004A22B6 /* Error.swift */,
+				350D928325E073B1004A22B6 /* DataTransferService.swift */,
+				350D928425E073B1004A22B6 /* NetworkService.swift */,
+				350D928525E073B1004A22B6 /* JSON.swift */,
+				350D928725E073B1004A22B6 /* HTTPMethod.swift */,
+				350D928925E073B1004A22B6 /* DataTransferErrorLogger.swift */,
+				350D928A25E073B1004A22B6 /* DataTransferErrorResolver.swift */,
+				350D928B25E073B1004A22B6 /* NetworkLogger.swift */,
+				350D928C25E073B1004A22B6 /* Decoders.swift */,
+				350D928D25E073B1004A22B6 /* Endpoint.swift */,
+				350D928E25E073B1004A22B6 /* NetworkConfig.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		350D92AC25E0745D004A22B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				350D92A625E07439004A22B6 /* Date.swift */,
+				350D92AD25E0747E004A22B6 /* DateFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		350D931A25E079BD004A22B6 /* PresentationLogic */ = {
+			isa = PBXGroup;
+			children = (
+				350D924925E06C9E004A22B6 /* PhotosViewModel.swift */,
+				350D933C25E079DF004A22B6 /* DelegatedCall.swift */,
+				350D931C25E079BD004A22B6 /* Info.plist */,
+				350D931B25E079BD004A22B6 /* PresentationLogic.h */,
+			);
+			path = PresentationLogic;
+			sourceTree = "<group>";
+		};
+		350D932725E079BD004A22B6 /* PresentationLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				350D932825E079BD004A22B6 /* PresentationLogicTests.swift */,
+				350D932A25E079BD004A22B6 /* Info.plist */,
+			);
+			path = PresentationLogicTests;
+			sourceTree = "<group>";
+		};
+		350D935B25E07C16004A22B6 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				350D935C25E07C45004A22B6 /* PhotoResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		350D938325E0C92F004A22B6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		350D939A25E0CBB1004A22B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				350D939B25E0CBDF004A22B6 /* UIApplication+Version.swift */,
+				350D93D625E0E4DE004A22B6 /* UIView+Animations.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		350D93B925E0E441004A22B6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E2825E1C31600A9DFB4 /* Animators */,
+				350D93F725E0EA6B004A22B6 /* FlexibleCollectionView */,
+				350D93BA25E0E44B004A22B6 /* IndicatorView.swift */,
+				350D93C225E0E480004A22B6 /* NibDesignableView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		350D93F725E0EA6B004A22B6 /* FlexibleCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				350D93F825E0EA6B004A22B6 /* FlexibleBaseCell.swift */,
+				350D93F925E0EA6B004A22B6 /* UIRectCorner.swift */,
+				350D93FA25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift */,
+				350D93FB25E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift */,
+				350D93FC25E0EA6B004A22B6 /* FlexibleCollectionView.swift */,
+			);
+			path = FlexibleCollectionView;
+			sourceTree = "<group>";
+		};
+		35EA4E2825E1C31600A9DFB4 /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */,
+				35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */,
+				35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
+		35EA4E4725E1CE8B00A9DFB4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E5F25E1CFA500A9DFB4 /* PhotoZoom */,
+				35EA4E4825E1CE9100A9DFB4 /* PhotosPageContainer */,
+				350D920725E064D5004A22B6 /* Photos */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		35EA4E4825E1CE9100A9DFB4 /* PhotosPageContainer */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E4925E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift */,
+				35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */,
+			);
+			path = PhotosPageContainer;
+			sourceTree = "<group>";
+		};
+		35EA4E5F25E1CFA500A9DFB4 /* PhotoZoom */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E6025E1CFB100A9DFB4 /* PhotoZoomViewController.swift */,
+				35EA4E7C25E1D8B000A9DFB4 /* PhotoZoom.storyboard */,
+			);
+			path = PhotoZoom;
+			sourceTree = "<group>";
+		};
+		68B6F376167FAB2CA534D0C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46B568452C1AC53FC04DD3F6 /* Pods-SparkDigital.debug.xcconfig */,
+				2F817D42283723BDAA579A8C /* Pods-SparkDigital.release.xcconfig */,
+				5B2229CA0DDD33B54C58FCE5 /* Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig */,
+				5DD53DC3C170F2C19B234174 /* Pods-SparkDigital-SparkDigitalUITests.release.xcconfig */,
+				13402DD8E5B6604C60AAEE26 /* Pods-SparkDigitalTests.debug.xcconfig */,
+				C4FD08F9F67D78F155A755E9 /* Pods-SparkDigitalTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBAC38838C5327F5E911B034 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6492CBDC182217D400DCC0BE /* Pods_SparkDigital.framework */,
+				D807CFFB3EF77655996A5225 /* Pods_SparkDigital_SparkDigitalUITests.framework */,
+				3503474E14F76F6F9CC283A3 /* Pods_SparkDigitalTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		350D924F25E07081004A22B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D926625E07081004A22B6 /* Core.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931425E079BD004A22B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D932B25E079BD004A22B6 /* PresentationLogic.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		350D91C525E05A43004A22B6 /* SparkDigital */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 350D91F025E05A46004A22B6 /* Build configuration list for PBXNativeTarget "SparkDigital" */;
 			buildPhases = (
+				71A90F5AFF174DEA5EC41864 /* [CP] Check Pods Manifest.lock */,
+				350D922125E0679B004A22B6 /* Rswift */,
 				350D91C225E05A43004A22B6 /* Sources */,
 				350D91C325E05A43004A22B6 /* Frameworks */,
 				350D91C425E05A43004A22B6 /* Resources */,
+				350D926E25E07081004A22B6 /* Embed Frameworks */,
+				6CAF65FBDB6E0CE5DD07277A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				350D926825E07081004A22B6 /* PBXTargetDependency */,
+				350D932D25E079BD004A22B6 /* PBXTargetDependency */,
 			);
 			name = SparkDigital;
 			productName = SparkDigital;
@@ -152,6 +594,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 350D91F325E05A46004A22B6 /* Build configuration list for PBXNativeTarget "SparkDigitalTests" */;
 			buildPhases = (
+				077CC270FD88F0F3C55998A9 /* [CP] Check Pods Manifest.lock */,
 				350D91D825E05A46004A22B6 /* Sources */,
 				350D91D925E05A46004A22B6 /* Frameworks */,
 				350D91DA25E05A46004A22B6 /* Resources */,
@@ -170,9 +613,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 350D91F625E05A46004A22B6 /* Build configuration list for PBXNativeTarget "SparkDigitalUITests" */;
 			buildPhases = (
+				D5FCFDBC9CFEAED85FB30D46 /* [CP] Check Pods Manifest.lock */,
 				350D91E325E05A46004A22B6 /* Sources */,
 				350D91E425E05A46004A22B6 /* Frameworks */,
 				350D91E525E05A46004A22B6 /* Resources */,
+				1B36240767D2AD32F3F94027 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +628,80 @@
 			productName = SparkDigitalUITests;
 			productReference = 350D91E725E05A46004A22B6 /* SparkDigitalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		350D925325E07081004A22B6 /* Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 350D926B25E07081004A22B6 /* Build configuration list for PBXNativeTarget "Core" */;
+			buildPhases = (
+				350D924F25E07081004A22B6 /* Headers */,
+				350D925025E07081004A22B6 /* Sources */,
+				350D925125E07081004A22B6 /* Frameworks */,
+				350D925225E07081004A22B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Core;
+			productName = Core;
+			productReference = 350D925425E07081004A22B6 /* Core.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		350D925B25E07081004A22B6 /* CoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 350D926F25E07081004A22B6 /* Build configuration list for PBXNativeTarget "CoreTests" */;
+			buildPhases = (
+				350D925825E07081004A22B6 /* Sources */,
+				350D925925E07081004A22B6 /* Frameworks */,
+				350D925A25E07081004A22B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				350D925F25E07081004A22B6 /* PBXTargetDependency */,
+				350D926125E07081004A22B6 /* PBXTargetDependency */,
+			);
+			name = CoreTests;
+			productName = CoreTests;
+			productReference = 350D925C25E07081004A22B6 /* CoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		350D931825E079BD004A22B6 /* PresentationLogic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 350D933025E079BD004A22B6 /* Build configuration list for PBXNativeTarget "PresentationLogic" */;
+			buildPhases = (
+				350D931425E079BD004A22B6 /* Headers */,
+				350D931525E079BD004A22B6 /* Sources */,
+				350D931625E079BD004A22B6 /* Frameworks */,
+				350D931725E079BD004A22B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PresentationLogic;
+			productName = PresentationLogic;
+			productReference = 350D931925E079BD004A22B6 /* PresentationLogic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		350D932025E079BD004A22B6 /* PresentationLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 350D933325E079BD004A22B6 /* Build configuration list for PBXNativeTarget "PresentationLogicTests" */;
+			buildPhases = (
+				350D931D25E079BD004A22B6 /* Sources */,
+				350D931E25E079BD004A22B6 /* Frameworks */,
+				350D931F25E079BD004A22B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				350D932425E079BD004A22B6 /* PBXTargetDependency */,
+				350D932625E079BD004A22B6 /* PBXTargetDependency */,
+			);
+			name = PresentationLogicTests;
+			productName = PresentationLogicTests;
+			productReference = 350D932125E079BD004A22B6 /* PresentationLogicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -204,6 +723,21 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 350D91C525E05A43004A22B6;
 					};
+					350D925325E07081004A22B6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					350D925B25E07081004A22B6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 350D91C525E05A43004A22B6;
+					};
+					350D931825E079BD004A22B6 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					350D932025E079BD004A22B6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 350D91C525E05A43004A22B6;
+					};
 				};
 			};
 			buildConfigurationList = 350D91C125E05A43004A22B6 /* Build configuration list for PBXProject "SparkDigital" */;
@@ -222,6 +756,10 @@
 				350D91C525E05A43004A22B6 /* SparkDigital */,
 				350D91DB25E05A46004A22B6 /* SparkDigitalTests */,
 				350D91E625E05A46004A22B6 /* SparkDigitalUITests */,
+				350D925325E07081004A22B6 /* Core */,
+				350D925B25E07081004A22B6 /* CoreTests */,
+				350D931825E079BD004A22B6 /* PresentationLogic */,
+				350D932025E079BD004A22B6 /* PresentationLogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,9 +769,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA4E7525E1D80900A9DFB4 /* PhotosPageContainer.storyboard in Resources */,
 				350D91D625E05A46004A22B6 /* LaunchScreen.storyboard in Resources */,
+				35EA4E7D25E1D8B000A9DFB4 /* PhotoZoom.storyboard in Resources */,
+				350D93E625E0E6D1004A22B6 /* Localizable.strings in Resources */,
+				350D920925E0651D004A22B6 /* Photos.storyboard in Resources */,
 				350D91D325E05A46004A22B6 /* Assets.xcassets in Resources */,
-				350D91D125E05A43004A22B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,16 +792,186 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		350D925225E07081004A22B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D925A25E07081004A22B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931725E079BD004A22B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931F25E079BD004A22B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		077CC270FD88F0F3C55998A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkDigitalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B36240767D2AD32F3F94027 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparkDigital-SparkDigitalUITests/Pods-SparkDigital-SparkDigitalUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350D922125E0679B004A22B6 /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = Rswift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		6CAF65FBDB6E0CE5DD07277A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkDigital/Pods-SparkDigital-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkDigital/Pods-SparkDigital-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparkDigital/Pods-SparkDigital-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71A90F5AFF174DEA5EC41864 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkDigital-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5FCFDBC9CFEAED85FB30D46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkDigital-SparkDigitalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		350D91C225E05A43004A22B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				350D91CE25E05A43004A22B6 /* ViewController.swift in Sources */,
+				350D93FE25E0EA6B004A22B6 /* UIRectCorner.swift in Sources */,
+				35EA4E4025E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift in Sources */,
+				350D940025E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift in Sources */,
+				350D93FD25E0EA6B004A22B6 /* FlexibleBaseCell.swift in Sources */,
+				35EA4E4A25E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift in Sources */,
+				350D920325E064C8004A22B6 /* InstantiableController.swift in Sources */,
 				350D91CA25E05A43004A22B6 /* AppDelegate.swift in Sources */,
+				350D93B225E0E424004A22B6 /* IndicatableController.swift in Sources */,
+				350D940125E0EA6B004A22B6 /* FlexibleCollectionView.swift in Sources */,
 				350D91CC25E05A43004A22B6 /* SceneDelegate.swift in Sources */,
+				350D93F025E0E8BB004A22B6 /* PhotoCell.swift in Sources */,
+				350D93C325E0E480004A22B6 /* NibDesignableView.swift in Sources */,
+				350D93BB25E0E44B004A22B6 /* IndicatorView.swift in Sources */,
+				35EA4E3825E1C33100A9DFB4 /* ZoomAnimator.swift in Sources */,
+				350D921125E06527004A22B6 /* PhotosViewController.swift in Sources */,
+				350D923925E068C8004A22B6 /* R.generated.swift in Sources */,
+				35EA4E6125E1CFB100A9DFB4 /* PhotoZoomViewController.swift in Sources */,
+				35EA4E2A25E1C32500A9DFB4 /* ZoomTransitionController.swift in Sources */,
+				350D939325E0CB8F004A22B6 /* AppContainer.swift in Sources */,
+				350D93FF25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift in Sources */,
+				350D939C25E0CBDF004A22B6 /* UIApplication+Version.swift in Sources */,
+				350D93D725E0E4DE004A22B6 /* UIView+Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +991,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		350D925025E07081004A22B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D92AE25E0747E004A22B6 /* DateFormatter.swift in Sources */,
+				350D938525E0C945004A22B6 /* GetPhotosUseCase.swift in Sources */,
+				350D929C25E073B1004A22B6 /* NetworkConfig.swift in Sources */,
+				350D92A725E07439004A22B6 /* Date.swift in Sources */,
+				350D929125E073B1004A22B6 /* DataTransferService.swift in Sources */,
+				350D934525E07B75004A22B6 /* API.swift in Sources */,
+				350D929325E073B1004A22B6 /* JSON.swift in Sources */,
+				350D929525E073B1004A22B6 /* HTTPMethod.swift in Sources */,
+				350D935D25E07C45004A22B6 /* PhotoResponse.swift in Sources */,
+				350D929B25E073B1004A22B6 /* Endpoint.swift in Sources */,
+				350D929025E073B1004A22B6 /* Error.swift in Sources */,
+				350D929225E073B1004A22B6 /* NetworkService.swift in Sources */,
+				350D929A25E073B1004A22B6 /* Decoders.swift in Sources */,
+				350D93AA25E0CCCA004A22B6 /* Environment.swift in Sources */,
+				350D929725E073B1004A22B6 /* DataTransferErrorLogger.swift in Sources */,
+				350D928F25E073B1004A22B6 /* Requestable.swift in Sources */,
+				350D929825E073B1004A22B6 /* DataTransferErrorResolver.swift in Sources */,
+				350D929925E073B1004A22B6 /* NetworkLogger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D925825E07081004A22B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D926425E07081004A22B6 /* CoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931525E079BD004A22B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D933D25E079DF004A22B6 /* DelegatedCall.swift in Sources */,
+				350D937C25E0C73E004A22B6 /* PhotosViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		350D931D25E079BD004A22B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350D932925E079BD004A22B6 /* PresentationLogicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,23 +1054,53 @@
 			target = 350D91C525E05A43004A22B6 /* SparkDigital */;
 			targetProxy = 350D91E825E05A46004A22B6 /* PBXContainerItemProxy */;
 		};
+		350D925F25E07081004A22B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 350D925325E07081004A22B6 /* Core */;
+			targetProxy = 350D925E25E07081004A22B6 /* PBXContainerItemProxy */;
+		};
+		350D926125E07081004A22B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 350D91C525E05A43004A22B6 /* SparkDigital */;
+			targetProxy = 350D926025E07081004A22B6 /* PBXContainerItemProxy */;
+		};
+		350D926825E07081004A22B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 350D925325E07081004A22B6 /* Core */;
+			targetProxy = 350D926725E07081004A22B6 /* PBXContainerItemProxy */;
+		};
+		350D932425E079BD004A22B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 350D931825E079BD004A22B6 /* PresentationLogic */;
+			targetProxy = 350D932325E079BD004A22B6 /* PBXContainerItemProxy */;
+		};
+		350D932625E079BD004A22B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 350D91C525E05A43004A22B6 /* SparkDigital */;
+			targetProxy = 350D932525E079BD004A22B6 /* PBXContainerItemProxy */;
+		};
+		350D932D25E079BD004A22B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 350D931825E079BD004A22B6 /* PresentationLogic */;
+			targetProxy = 350D932C25E079BD004A22B6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		350D91CF25E05A43004A22B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				350D91D025E05A43004A22B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		350D91D425E05A46004A22B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				350D91D525E05A46004A22B6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		350D93E825E0E6D1004A22B6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				350D93E725E0E6D1004A22B6 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -433,17 +1224,20 @@
 		};
 		350D91F125E05A46004A22B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B568452C1AC53FC04DD3F6 /* Pods-SparkDigital.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RH4PC25J9C;
+				DEVELOPMENT_TEAM = A5FP7L6CSA;
 				INFOPLIST_FILE = SparkDigital/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.SparkDigital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,17 +1246,20 @@
 		};
 		350D91F225E05A46004A22B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F817D42283723BDAA579A8C /* Pods-SparkDigital.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RH4PC25J9C;
+				DEVELOPMENT_TEAM = A5FP7L6CSA;
 				INFOPLIST_FILE = SparkDigital/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.SparkDigital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,6 +1268,7 @@
 		};
 		350D91F425E05A46004A22B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13402DD8E5B6604C60AAEE26 /* Pods-SparkDigitalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +1291,7 @@
 		};
 		350D91F525E05A46004A22B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4FD08F9F67D78F155A755E9 /* Pods-SparkDigitalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +1314,7 @@
 		};
 		350D91F725E05A46004A22B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2229CA0DDD33B54C58FCE5 /* Pods-SparkDigital-SparkDigitalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +1335,7 @@
 		};
 		350D91F825E05A46004A22B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DD53DC3C170F2C19B234174 /* Pods-SparkDigital-SparkDigitalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +1351,201 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SparkDigital;
+			};
+			name = Release;
+		};
+		350D926C25E07081004A22B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		350D926D25E07081004A22B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		350D927025E07081004A22B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				INFOPLIST_FILE = CoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.CoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkDigital.app/SparkDigital";
+			};
+			name = Debug;
+		};
+		350D927125E07081004A22B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				INFOPLIST_FILE = CoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.CoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkDigital.app/SparkDigital";
+			};
+			name = Release;
+		};
+		350D933125E079BD004A22B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PresentationLogic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.PresentationLogic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		350D933225E079BD004A22B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PresentationLogic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.PresentationLogic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		350D933425E079BD004A22B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				INFOPLIST_FILE = PresentationLogicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.PresentationLogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkDigital.app/SparkDigital";
+			};
+			name = Debug;
+		};
+		350D933525E079BD004A22B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH4PC25J9C;
+				INFOPLIST_FILE = PresentationLogicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.demo.PresentationLogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkDigital.app/SparkDigital";
 			};
 			name = Release;
 		};
@@ -588,6 +1584,42 @@
 			buildConfigurations = (
 				350D91F725E05A46004A22B6 /* Debug */,
 				350D91F825E05A46004A22B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		350D926B25E07081004A22B6 /* Build configuration list for PBXNativeTarget "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				350D926C25E07081004A22B6 /* Debug */,
+				350D926D25E07081004A22B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		350D926F25E07081004A22B6 /* Build configuration list for PBXNativeTarget "CoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				350D927025E07081004A22B6 /* Debug */,
+				350D927125E07081004A22B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		350D933025E079BD004A22B6 /* Build configuration list for PBXNativeTarget "PresentationLogic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				350D933125E079BD004A22B6 /* Debug */,
+				350D933225E079BD004A22B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		350D933325E079BD004A22B6 /* Build configuration list for PBXNativeTarget "PresentationLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				350D933425E079BD004A22B6 /* Debug */,
+				350D933525E079BD004A22B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

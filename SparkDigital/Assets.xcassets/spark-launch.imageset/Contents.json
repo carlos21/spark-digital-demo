@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "spark-launch.png",
       "idiom" : "universal"
     }
   ],
