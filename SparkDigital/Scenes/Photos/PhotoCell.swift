@@ -13,17 +13,13 @@ class PhotoCell: FlexibleBaseCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    override func prepareForReuse() {
-//        imageView.image = nil
-    }
-    
     override func awakeFromNib() {
         cornerRadius = 5.0
         corners = .all
         imageView.contentMode = .scaleAspectFit
     }
     
-    func setup(photo: PhotosViewModel.PhotoVM) {
+    func setup(photo: PhotoVM) {
         switch photo.thumbnailState {
         case .idle:
             imageView.image = nil
@@ -32,10 +28,20 @@ class PhotoCell: FlexibleBaseCell {
             break
             
         case .success(let data):
-            imageView.image = UIImage(data: data)
+            animate(photo: data)
             
         case .error:
-            imageView.image = nil // TO DO
+            imageView.image = nil // TODO
         }
+    }
+    
+    private func animate(photo: Data) {
+        UIView.transition(
+            with: imageView,
+            duration: 0.15,
+            options: .transitionCrossDissolve,
+            animations: { [weak self] in
+                self?.imageView.image = UIImage(data: photo)
+            }, completion: nil)
     }
 }

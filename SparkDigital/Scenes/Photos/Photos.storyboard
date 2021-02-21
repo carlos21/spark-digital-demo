@@ -56,10 +56,10 @@
                         <viewLayoutGuide key="safeArea" id="Csd-f4-LAn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5c0-gx-hiX" firstAttribute="leading" secondItem="Csd-f4-LAn" secondAttribute="leading" id="W4h-w1-EK2"/>
+                            <constraint firstItem="5c0-gx-hiX" firstAttribute="leading" secondItem="AmS-8h-dit" secondAttribute="leading" id="W4h-w1-EK2"/>
                             <constraint firstAttribute="bottom" secondItem="5c0-gx-hiX" secondAttribute="bottom" id="vP3-6h-OeG"/>
                             <constraint firstItem="5c0-gx-hiX" firstAttribute="top" secondItem="Csd-f4-LAn" secondAttribute="top" id="vfE-OR-dpn"/>
-                            <constraint firstItem="Csd-f4-LAn" firstAttribute="trailing" secondItem="5c0-gx-hiX" secondAttribute="trailing" id="zD2-f5-2dy"/>
+                            <constraint firstAttribute="trailing" secondItem="5c0-gx-hiX" secondAttribute="trailing" id="zD2-f5-2dy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="T8n-bL-XFQ"/>

@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import PresentationLogic
+import Core
 
 protocol PhotoZoomViewControllerDelegate: class {
     
@@ -27,28 +29,34 @@ final class PhotoZoomViewController: UIViewController {
     // MARK: - Properties
     
     weak var delegate: PhotoZoomViewControllerDelegate?
-    var image: UIImage!
     var index: Int = 0
     var doubleTapGestureRecognizer: UITapGestureRecognizer!
+    
+    var image: UIImage? {
+        guard let data = viewModel.photo?.bigImageState.data else { return nil }
+        return UIImage(data: data)
+    }
+    
+    lazy var viewModel: PhotoZoomViewModel = {
+        let transferService = AppContainer.shared.dataTransferService
+        let downloadImageUseCase = DownloadImageUseCase(transferService: transferService)
+        return PhotoZoomViewModel(downloadImageUseCase: downloadImageUseCase)
+    }()
     
     // MARK: - Functions
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTapWith(gestureRecognizer:)))
+        self.doubleTapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                 action: #selector(didDoubleTapWith(gestureRecognizer:)))
         self.doubleTapGestureRecognizer.numberOfTapsRequired = 2
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.delegate = self
-        self.scrollView.contentInsetAdjustmentBehavior = .never
-        self.imageView.image = self.image
-        self.imageView.frame = CGRect(x: self.imageView.frame.origin.x,
-                                      y: self.imageView.frame.origin.y,
-                                      width: self.image.size.width,
-                                      height: self.image.size.height)
-        self.view.addGestureRecognizer(self.doubleTapGestureRecognizer)
+        setupUI()
+        setupBindings()
+        viewModel.download()
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,6 +69,34 @@ final class PhotoZoomViewController: UIViewController {
         super.viewDidAppear(animated)
         updateZoomScaleForSize(view.bounds.size)
         updateConstraintsForSize(view.bounds.size)
+    }
+    
+    private func setupUI() {
+        self.scrollView.delegate = self
+        self.scrollView.contentInsetAdjustmentBehavior = .never
+        self.imageView.image = self.image
+        self.imageView.frame = CGRect(x: self.imageView.frame.origin.x,
+                                      y: self.imageView.frame.origin.y,
+                                      width: self.image?.size.width ?? 0,
+                                      height: self.image?.size.height ?? 0)
+        self.view.addGestureRecognizer(self.doubleTapGestureRecognizer)
+    }
+    
+    private func setupBindings() {
+        viewModel.photoUpdated.delegate(to: self) { (self, photo) in
+            switch photo.bigImageState {
+            case .loading:
+                break
+                
+            case .success(let data):
+                self.imageView.image = UIImage(data: data)
+                
+            default:
+                if let data = photo.thumbnailData {
+                    self.imageView.image = UIImage(data: data)
+                }
+            }
+        }
     }
     
     @objc func didDoubleTapWith(gestureRecognizer: UITapGestureRecognizer) {
@@ -85,7 +121,6 @@ final class PhotoZoomViewController: UIViewController {
         let heightScale = size.height / imageView.bounds.height
         let minScale = min(widthScale, heightScale)
         scrollView.minimumZoomScale = minScale
-        
         scrollView.zoomScale = minScale
         scrollView.maximumZoomScale = minScale * 4
     }
@@ -124,5 +159,11 @@ extension PhotoZoomViewController: InstantiableController {
     
     static func instance() -> PhotoZoomViewController {
         return R.storyboard.photoZoom.instantiateInitialViewController()!
+    }
+    
+    static func instance(photo: PhotoVM) -> PhotoZoomViewController {
+        let controller = R.storyboard.photoZoom.instantiateInitialViewController()!
+        controller.viewModel.photo = photo
+        return controller
     }
 }

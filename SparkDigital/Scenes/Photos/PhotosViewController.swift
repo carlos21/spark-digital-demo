@@ -23,8 +23,9 @@ final class PhotosViewController: UIViewController, IndicatableController {
     
     lazy var viewModel: PhotosViewModel = {
         let transferService = AppContainer.shared.dataTransferService
-        let useCase = GetPhotosUseCase(transferService: transferService)
-        return PhotosViewModel(getListUseCase: useCase)
+        let getPhotosUseCase = GetPhotosUseCase(transferService: transferService)
+        let downloadImageUseCase = DownloadImageUseCase(transferService: transferService)
+        return PhotosViewModel(getListUseCase: getPhotosUseCase, downloadImageUseCase: downloadImageUseCase)
     }()
     
     lazy var refreshControl: UIRefreshControl = {
@@ -96,7 +97,7 @@ final class PhotosViewController: UIViewController, IndicatableController {
     
     private func updateColumns() {
         if UIDevice.current.orientation.isLandscape {
-            collectionView.settings.numberOfColumns = UIDevice.current.userInterfaceIdiom == .pad ? 7 : 5
+            collectionView.settings.numberOfColumns = UIDevice.current.userInterfaceIdiom == .pad ? 7 : 6
         } else {
             collectionView.settings.numberOfColumns = UIDevice.current.userInterfaceIdiom == .pad ? 5 : 3
         }

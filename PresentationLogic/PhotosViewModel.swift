@@ -13,14 +13,17 @@ public class PhotosViewModel {
     // MARK: - Properties
     
     public var getListUseCase: GetPhotosUseCase
+    public var downloadImageUseCase: DownloadImageUseCase
     public var state = DelegatedCall<ListState>()
     public var photoUpdated = DelegatedCall<(photo: PhotoVM, indexPath: IndexPath)>()
-    public var photos = [PhotosViewModel.PhotoVM]()
+    public var photos = [PhotoVM]()
     
     // MARK: - Init
     
-    public init(getListUseCase: GetPhotosUseCase) {
+    public init(getListUseCase: GetPhotosUseCase,
+                downloadImageUseCase: DownloadImageUseCase) {
         self.getListUseCase = getListUseCase
+        self.downloadImageUseCase = downloadImageUseCase
     }
     
     // MARK: - Functions
@@ -52,8 +55,7 @@ public class PhotosViewModel {
         guard photo.thumbnailState.shouldDownload else { return }
         
         photo.thumbnailState = .loading
-        getListUseCase.downloadPhoto(path: photo.thumbnailUrl) { [weak self] result in
-            guard let self = self else { return }
+        downloadImageUseCase.downloadPhoto(path: photo.thumbnailUrl) { [weak self] result in
             switch result {
             case .success(let data):
                 photo.thumbnailState = .success(data)
@@ -61,68 +63,14 @@ public class PhotosViewModel {
             case .failure:
                 photo.thumbnailState = .error
             }
+            
+            guard let self = self else { return }
             self.photoUpdated.callback?((photo, indexPath))
         }
     }
 }
 
 extension PhotosViewModel {
- 
-    public class PhotoVM {
-        
-        public let title: String
-        public let url: String
-        public let thumbnailUrl: String
-        public var thumbnailState: PhotoState
-        public var bigImageState: PhotoState
-        
-        public var thumbnailData: Data? {
-            switch thumbnailState {
-            case .success(let data):
-                return data
-                
-            default:
-                return nil
-            }
-        }
-        
-        init(title: String, url: String, thumbnailUrl: String, thumbnailState: PhotoState, bigImageState: PhotoState) {
-            self.title = title
-            self.url = url
-            self.thumbnailUrl = thumbnailUrl
-            self.thumbnailState = thumbnailState
-            self.bigImageState = bigImageState
-        }
-    }
-}
-
-extension PhotosViewModel {
-    
-    public enum ListState {
-        
-        case idle
-        case loading
-        case success
-        case error(String)
-    }
-    
-    public enum PhotoState {
-        
-        case idle
-        case loading
-        case success(Data)
-        case error
-        
-        var shouldDownload: Bool {
-            switch self {
-            case .idle, .error:
-                return true
-                
-            default:
-                return false
-            }
-        }
-    }
     
     public enum LoadingType {
         

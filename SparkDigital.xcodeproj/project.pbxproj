@@ -60,6 +60,10 @@
 		350D93FF25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93FA25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift */; };
 		350D940025E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93FB25E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift */; };
 		350D940125E0EA6B004A22B6 /* FlexibleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D93FC25E0EA6B004A22B6 /* FlexibleCollectionView.swift */; };
+		35E0ECEE25E22F3B00FC0747 /* PhotoZoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ECED25E22F3B00FC0747 /* PhotoZoomViewModel.swift */; };
+		35E0ECF625E22F5900FC0747 /* PhotoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ECF525E22F5900FC0747 /* PhotoVM.swift */; };
+		35E0ED0425E22FAF00FC0747 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ED0325E22FAF00FC0747 /* State.swift */; };
+		35E0ED1225E2340F00FC0747 /* DownloadImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0ED1125E2340F00FC0747 /* DownloadImageUseCase.swift */; };
 		35EA4E2A25E1C32500A9DFB4 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */; };
 		35EA4E3825E1C33100A9DFB4 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */; };
 		35EA4E4025E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */; };
@@ -211,6 +215,10 @@
 		350D93FA25E0EA6B004A22B6 /* FlexibleCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		350D93FB25E0EA6B004A22B6 /* FlexibleCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleCollectionViewLayout.swift; sourceTree = "<group>"; };
 		350D93FC25E0EA6B004A22B6 /* FlexibleCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleCollectionView.swift; sourceTree = "<group>"; };
+		35E0ECED25E22F3B00FC0747 /* PhotoZoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoZoomViewModel.swift; sourceTree = "<group>"; };
+		35E0ECF525E22F5900FC0747 /* PhotoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVM.swift; sourceTree = "<group>"; };
+		35E0ED0325E22FAF00FC0747 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		35E0ED1125E2340F00FC0747 /* DownloadImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageUseCase.swift; sourceTree = "<group>"; };
 		35EA4E2925E1C32500A9DFB4 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
 		35EA4E3725E1C33100A9DFB4 /* ZoomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		35EA4E3F25E1C48300A9DFB4 /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
@@ -420,9 +428,12 @@
 			isa = PBXGroup;
 			children = (
 				350D924925E06C9E004A22B6 /* PhotosViewModel.swift */,
+				35E0ECED25E22F3B00FC0747 /* PhotoZoomViewModel.swift */,
 				350D933C25E079DF004A22B6 /* DelegatedCall.swift */,
 				350D931C25E079BD004A22B6 /* Info.plist */,
 				350D931B25E079BD004A22B6 /* PresentationLogic.h */,
+				35E0ECF525E22F5900FC0747 /* PhotoVM.swift */,
+				35E0ED0325E22FAF00FC0747 /* State.swift */,
 			);
 			path = PresentationLogic;
 			sourceTree = "<group>";
@@ -448,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				350D938425E0C945004A22B6 /* GetPhotosUseCase.swift */,
+				35E0ED1125E2340F00FC0747 /* DownloadImageUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -876,7 +888,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1005,6 +1017,7 @@
 				350D929525E073B1004A22B6 /* HTTPMethod.swift in Sources */,
 				350D935D25E07C45004A22B6 /* PhotoResponse.swift in Sources */,
 				350D929B25E073B1004A22B6 /* Endpoint.swift in Sources */,
+				35E0ED1225E2340F00FC0747 /* DownloadImageUseCase.swift in Sources */,
 				350D929025E073B1004A22B6 /* Error.swift in Sources */,
 				350D929225E073B1004A22B6 /* NetworkService.swift in Sources */,
 				350D929A25E073B1004A22B6 /* Decoders.swift in Sources */,
@@ -1029,7 +1042,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				350D933D25E079DF004A22B6 /* DelegatedCall.swift in Sources */,
+				35E0ECF625E22F5900FC0747 /* PhotoVM.swift in Sources */,
 				350D937C25E0C73E004A22B6 /* PhotosViewModel.swift in Sources */,
+				35E0ED0425E22FAF00FC0747 /* State.swift in Sources */,
+				35E0ECEE25E22F3B00FC0747 /* PhotoZoomViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
