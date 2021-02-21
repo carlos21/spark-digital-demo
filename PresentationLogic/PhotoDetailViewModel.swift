@@ -1,5 +1,5 @@
 //
-//  PhotoZoomViewModel.swift
+//  PhotoDetailViewModel.swift
 //  PresentationLogic
 //
 //  Created by Carlos Duclos on 21/02/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Core
 
-public class PhotoZoomViewModel {
+public class PhotoDetailViewModel {
     
     // MARK: - Properties
     
@@ -23,7 +23,14 @@ public class PhotoZoomViewModel {
     }
     
     public func download() {
-        guard let photo = self.photo, photo.bigImageState.shouldDownload else { return }
+        if let photo = self.photo, case PhotoState.success = photo.bigImageState {
+            photoUpdated.callback?(photo)
+            return
+        }
+        
+        guard let photo = self.photo, photo.bigImageState.shouldDownload else {
+            return
+        }
         
         photo.bigImageState = .loading
         downloadImageUseCase.downloadPhoto(path: photo.url) { [weak self] result in

@@ -32,7 +32,7 @@ final public class GetPhotosUseCase {
                 completion(.success(photos))
 
             case .failure(let error):
-                completion(.failure(.parsing(error)))
+                completion(.failure(error))
             }
         }
         return cancellable

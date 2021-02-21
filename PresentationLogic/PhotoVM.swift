@@ -25,6 +25,16 @@ public class PhotoVM {
         }
     }
     
+    public var bigImageData: Data? {
+        switch bigImageState {
+        case .success(let data):
+            return data
+            
+        default:
+            return thumbnailData
+        }
+    }
+    
     init(title: String, url: String, thumbnailUrl: String, thumbnailState: PhotoState, bigImageState: PhotoState) {
         self.title = title
         self.url = url

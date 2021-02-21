@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Zoom-->
+        <!--Detail-->
         <scene sceneID="MkH-wG-0ce">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="fD1-F7-gns" customClass="PhotoPageContainerViewController" customModule="SparkDigital" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             <constraint firstItem="WE3-xg-aVD" firstAttribute="top" secondItem="kBz-Pf-cNi" secondAttribute="top" id="mtp-u4-fSV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Zoom" id="I0p-fG-nnb"/>
+                    <navigationItem key="navigationItem" title="Detail" id="I0p-fG-nnb"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jw-LE-jSH" userLabel="First Responder" sceneMemberID="firstResponder"/>

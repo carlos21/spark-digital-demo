@@ -93,8 +93,8 @@ struct R: Rswift.Validatable {
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `PhotoZoom`.
-    static let photoZoom = _R.storyboard.photoZoom()
+    /// Storyboard `PhotoDetail`.
+    static let photoDetail = _R.storyboard.photoDetail()
     /// Storyboard `PhotosPageContainer`.
     static let photosPageContainer = _R.storyboard.photosPageContainer()
     /// Storyboard `Photos`.
@@ -108,9 +108,9 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "PhotoZoom", bundle: ...)`
-    static func photoZoom(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.photoZoom)
+    /// `UIStoryboard(name: "PhotoDetail", bundle: ...)`
+    static func photoDetail(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.photoDetail)
     }
     #endif
 
@@ -243,7 +243,7 @@ struct _R: Rswift.Validatable {
       try launchScreen.validate()
       #endif
       #if os(iOS) || os(tvOS)
-      try photoZoom.validate()
+      try photoDetail.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try photos.validate()
@@ -271,11 +271,11 @@ struct _R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    struct photoZoom: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = PhotoZoomViewController
+    struct photoDetail: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = PhotoDetailViewController
 
       let bundle = R.hostingBundle
-      let name = "PhotoZoom"
+      let name = "PhotoDetail"
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {

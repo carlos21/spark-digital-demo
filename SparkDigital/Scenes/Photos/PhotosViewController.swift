@@ -183,10 +183,18 @@ extension PhotosViewController: ZoomAnimatorDelegate {
             //Guard against nil values
             guard let guardedCell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? PhotoCell) else {
                 //Return a default UIImageView
-                return UIImageView(frame: CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 100.0, height: 100.0))
+                return UIImageView(frame: CGRect(x: UIScreen.main.bounds.midX,
+                                                 y: UIScreen.main.bounds.midY,
+                                                 width: 100.0,
+                                                 height: 100.0))
             }
-            //The PhotoCollectionViewCell was found in the collectionView, return the image
-            return guardedCell.imageView
+            //The PhotoCell was found in the collectionView, return the image
+            let photo = viewModel.photos[self.selectedIndexPath.row]
+            let imageView = UIImageView(frame: guardedCell.imageView.frame)
+            if let data = photo.bigImageData {
+                imageView.image = UIImage(data: data)
+            }
+            return imageView
             
         } else {
             //Guard against nil return values
@@ -194,8 +202,13 @@ extension PhotosViewController: ZoomAnimatorDelegate {
                 //Return a default UIImageView
                 return UIImageView(frame: CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 100.0, height: 100.0))
             }
-            //The PhotoCollectionViewCell was found in the collectionView, return the image
-            return guardedCell.imageView
+            //The PhotoCell was found in the collectionView, return the image
+            let photo = viewModel.photos[self.selectedIndexPath.row]
+            let imageView = UIImageView(frame: guardedCell.imageView.frame)
+            if let data = photo.bigImageData {
+                imageView.image = UIImage(data: data)
+            }
+            return imageView
         }
         
     }
@@ -241,7 +254,7 @@ extension PhotosViewController: ZoomAnimatorDelegate {
     }
     
     func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
-        let cell = self.collectionView.cellForItem(at: self.selectedIndexPath) as! PhotoCell
+        guard let cell = self.collectionView.cellForItem(at: self.selectedIndexPath) as? PhotoCell else { return }
         let cellFrame = self.collectionView.convert(cell.frame, to: self.view)
         
         if cellFrame.minY < self.collectionView.contentInset.top {
