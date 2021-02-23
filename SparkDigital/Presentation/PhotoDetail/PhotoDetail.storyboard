@@ -20,20 +20,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgs-se-bFw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgs-se-bFw">
                                 <rect key="frame" x="0.0" y="241" width="414" height="414"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lgs-se-bFw" secondAttribute="height" multiplier="1:1" id="s0e-vi-Oqu"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eaU-sJ-TVv"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="eaU-sJ-TVv" firstAttribute="trailing" secondItem="lgs-se-bFw" secondAttribute="trailing" id="0ki-ah-aV9"/>
-                            <constraint firstItem="lgs-se-bFw" firstAttribute="leading" secondItem="eaU-sJ-TVv" secondAttribute="leading" id="2bU-YF-dVd"/>
-                            <constraint firstItem="lgs-se-bFw" firstAttribute="centerY" secondItem="ar7-ES-Av5" secondAttribute="centerY" id="Zig-uE-0lX"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="lgs-se-bFw" id="qCw-Wi-5xs"/>

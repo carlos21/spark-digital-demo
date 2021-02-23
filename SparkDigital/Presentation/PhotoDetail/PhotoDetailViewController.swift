@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 import PresentationLogic
 import Core
 
@@ -19,6 +20,10 @@ final class PhotoDetailViewController: UIViewController {
     // MARK: - Properties
     
     var index: Int = 0
+    var topConstraint: Constraint!
+    var bottomConstraint: Constraint!
+    var rightConstraint: Constraint!
+    var leftConstraint: Constraint!
     
     var image: UIImage? {
         guard let data = viewModel.photo?.bigImageState.data else { return nil }
@@ -39,10 +44,33 @@ final class PhotoDetailViewController: UIViewController {
         setupBindings()
         viewModel.download()
     }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            self.topConstraint.activate()
+            self.bottomConstraint.activate()
+            self.rightConstraint.deactivate()
+            self.leftConstraint.deactivate()
+        } else {
+            self.topConstraint.deactivate()
+            self.bottomConstraint.deactivate()
+            self.rightConstraint.activate()
+            self.leftConstraint.activate()
+        }
+    }
     
     private func setupUI() {
         imageView.contentMode = .scaleAspectFit
         imageView.image = self.image
+        imageView.snp.makeConstraints {
+            self.topConstraint = $0.top.equalTo(0).constraint
+            self.bottomConstraint = $0.bottom.equalTo(0).constraint
+            self.rightConstraint = $0.right.equalTo(0).constraint
+            self.leftConstraint = $0.left.equalTo(0).constraint
+            $0.centerY.equalTo(self.view.snp.centerY)
+            $0.centerX.equalTo(self.view.snp.centerX)
+        }
     }
     
     private func setupBindings() {
