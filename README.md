@@ -1,6 +1,6 @@
 # Spark Digital Challenge
 
-This is a demo project for Spark Digital that lists photos taking into consideration the performance on each action the user does.
+This is a demo project for Spark Digital.
 
 ## Features
 
