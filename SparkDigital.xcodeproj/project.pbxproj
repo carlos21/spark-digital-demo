@@ -303,6 +303,7 @@
 		350D91C825E05A43004A22B6 /* SparkDigital */ = {
 			isa = PBXGroup;
 			children = (
+				3559229425E55E5600C95508 /* App */,
 				35EA4E4725E1CE8B00A9DFB4 /* Presentation */,
 				350D93B925E0E441004A22B6 /* Common */,
 				350D939A25E0CBB1004A22B6 /* Extensions */,
@@ -311,9 +312,6 @@
 				350D91D225E05A46004A22B6 /* Assets.xcassets */,
 				350D91D425E05A46004A22B6 /* LaunchScreen.storyboard */,
 				350D91D725E05A46004A22B6 /* Info.plist */,
-				350D920225E064C8004A22B6 /* InstantiableController.swift */,
-				350D939225E0CB8F004A22B6 /* AppContainer.swift */,
-				350D93B125E0E424004A22B6 /* IndicatableController.swift */,
 				350D93E825E0E6D1004A22B6 /* Localizable.strings */,
 			);
 			path = SparkDigital;
@@ -421,6 +419,8 @@
 				350D93BA25E0E44B004A22B6 /* IndicatorView.swift */,
 				35A6D71325E4B69200C2DC61 /* IndicatorView.xib */,
 				350D93C225E0E480004A22B6 /* NibDesignableView.swift */,
+				350D920225E064C8004A22B6 /* InstantiableController.swift */,
+				350D93B125E0E424004A22B6 /* IndicatableController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -452,6 +452,14 @@
 				350D935B25E07C16004A22B6 /* Entities */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		3559229425E55E5600C95508 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				350D939225E0CB8F004A22B6 /* AppContainer.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		358A7D6425E2F1F2008ADAB8 /* Mocks */ = {
