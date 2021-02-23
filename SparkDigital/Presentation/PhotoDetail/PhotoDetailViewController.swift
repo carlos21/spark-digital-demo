@@ -70,6 +70,7 @@ final class PhotoDetailViewController: UIViewController {
             self.leftConstraint = $0.left.equalTo(0).constraint
             $0.centerY.equalTo(self.view.snp.centerY)
             $0.centerX.equalTo(self.view.snp.centerX)
+            $0.width.equalTo(self.imageView.snp.height).multipliedBy(1.0).priority(750)
         }
     }
     
