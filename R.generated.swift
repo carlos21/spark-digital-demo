@@ -147,6 +147,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `IndicatorView`.
+    static let indicatorView = _R.nib._IndicatorView()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "IndicatorView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.indicatorView) instead")
+    static func indicatorView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.indicatorView)
+    }
+    #endif
+
+    static func indicatorView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.indicatorView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `photoCell`.
@@ -157,12 +177,31 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
     struct localizable {
+      /// en translation: An error occurred while loading the photos. Please, try again.
+      ///
+      /// Locales: en
+      static let loadingError = Rswift.StringResource(key: "loadingError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Retry
       ///
       /// Locales: en
       static let retry = Rswift.StringResource(key: "retry", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: An error occurred while loading the photos. Please, try again.
+      ///
+      /// Locales: en
+      static func loadingError(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("loadingError", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "loadingError"
+        }
+
+        return NSLocalizedString("loadingError", bundle: bundle, comment: "")
+      }
 
       /// en translation: Retry
       ///
@@ -204,6 +243,23 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _IndicatorView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "IndicatorView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

@@ -9,12 +9,12 @@ import Foundation
 
 public extension Date {
     
+    /// Instantiates a date using a default format yyyy-MM-dd HH:mm:ss zzz
     init?(custom string: String) {
         if let date = DateFormatter.defaultFormat.date(from: string) {
             self = date
             return
         }
-        
         return nil
     }
 }

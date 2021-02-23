@@ -11,9 +11,9 @@ struct API { }
 
 extension API {
     
-    struct Photo {
+    struct Photos {
         
-        static func getList() -> Endpoint<[PhotoResponse]> {
+        static func getList() -> Endpoint<[Photo]> {
             return Endpoint(path: "photos", method: .get)
         }
     }

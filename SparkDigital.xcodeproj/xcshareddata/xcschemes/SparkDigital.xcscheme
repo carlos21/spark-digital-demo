@@ -56,26 +56,6 @@
                ReferencedContainer = "container:SparkDigital.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "350D925B25E07081004A22B6"
-               BuildableName = "CoreTests.xctest"
-               BlueprintName = "CoreTests"
-               ReferencedContainer = "container:SparkDigital.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "350D932025E079BD004A22B6"
-               BuildableName = "PresentationLogicTests.xctest"
-               BlueprintName = "PresentationLogicTests"
-               ReferencedContainer = "container:SparkDigital.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

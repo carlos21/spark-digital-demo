@@ -1,0 +1,23 @@
+module: Core
+author: Carlos Duclos
+github_url: https://github.com/carlos21/spark-digital-demo
+
+theme: fullwidth
+clean: false
+# exclude: [SparkDigital/**]
+# include: [PresentationLogic/**]
+
+readme: README.md
+
+skip_undocumented: true
+hide_documentation_coverage: false
+
+xcodebuild_arguments: [-workspace, SparkDigital.xcworkspace, -scheme, Core]
+
+# jazzy \
+#   --module Core \
+#   --output docs/core
+
+# jazzy \
+#   --module PresentationLogic \
+#   --output docs/presentation-logic

@@ -9,6 +9,7 @@ import Foundation
 
 extension DateFormatter {
     
+    /// Custom date formatter  yyyy-MM-dd HH:mm:ss zzz
     public static let defaultFormat: DateFormatter = {
         let formatter =  DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")

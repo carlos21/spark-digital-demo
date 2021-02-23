@@ -6,3 +6,4 @@
 */
 
 "retry" = "Retry";
+"loadingError" = "An error occurred while loading the photos. Please, try again.";
