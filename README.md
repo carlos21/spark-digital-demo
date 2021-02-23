@@ -1,3 +1,7 @@
+# Spark Digital Challenge
+
+This is a demo project for Spark Digital that lists photos taking into consideration the performance on each action the user does.
+
 ## Features
 
 - When an image was already downloaded, it reuses teh saved data to display it immediately.
@@ -6,6 +10,7 @@
 - Added gesture to dismiss a photo detail
 - Only when accessing a photo detail, it requests the bigger version of it.
 - The photos layout changed according to the iOS device
+- Works on iOS 11 or above
 
 ## Code coverage
 
