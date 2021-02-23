@@ -54,5 +54,3 @@ fastlane/test_output
 
 fastlane/reports/
 fastlane/README.md
-
-docs/**

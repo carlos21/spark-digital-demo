@@ -1,0 +1,831 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Data/Repositories/PhotosRepository.swift",
+      "line": 19,
+      "symbol": "PhotosRepository.init(transferService:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Domain/Entities/Photo.swift",
+      "line": 13,
+      "symbol": "Photo.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Domain/Entities/Photo.swift",
+      "line": 14,
+      "symbol": "Photo.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Domain/Entities/Photo.swift",
+      "line": 15,
+      "symbol": "Photo.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Domain/Entities/Photo.swift",
+      "line": 16,
+      "symbol": "Photo.thumbnailUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Domain/Protocols/PhotosRepositoryProtocol.swift",
+      "line": 10,
+      "symbol": "GetPhotosCompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Domain/Protocols/PhotosRepositoryProtocol.swift",
+      "line": 11,
+      "symbol": "DownloadPhotoCompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Environment.swift",
+      "line": 10,
+      "symbol": "Environment",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Environment.swift",
+      "line": 12,
+      "symbol": "Environment.dev",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Environment.swift",
+      "line": 14,
+      "symbol": "Environment.baseUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorLogger.swift",
+      "line": 10,
+      "symbol": "DataTransferErrorLoggerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorLogger.swift",
+      "line": 12,
+      "symbol": "DataTransferErrorLoggerProtocol.log(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorLogger.swift",
+      "line": 15,
+      "symbol": "DataTransferErrorLogger",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorLogger.swift",
+      "line": 17,
+      "symbol": "DataTransferErrorLogger.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorLogger.swift",
+      "line": 19,
+      "symbol": "DataTransferErrorLogger.log(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorResolver.swift",
+      "line": 10,
+      "symbol": "DataTransferErrorResolverProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorResolver.swift",
+      "line": 12,
+      "symbol": "DataTransferErrorResolverProtocol.resolve(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorResolver.swift",
+      "line": 15,
+      "symbol": "DataTransferErrorResolver",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorResolver.swift",
+      "line": 17,
+      "symbol": "DataTransferErrorResolver.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferErrorResolver.swift",
+      "line": 19,
+      "symbol": "DataTransferErrorResolver.resolve(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 10,
+      "symbol": "DataTransferError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 21,
+      "symbol": "DataTransferError.resolvedNetworkFailure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 50,
+      "symbol": "DataTransferServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 52,
+      "symbol": "DataTransferServiceProtocol.CompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 55,
+      "symbol": "DataTransferServiceProtocol.request(with:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 60,
+      "symbol": "DataTransferServiceProtocol.request(with:progressHandler:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 66,
+      "symbol": "DataTransferService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 72,
+      "symbol": "DataTransferService.init(with:errorResolver:errorLogger:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 81,
+      "symbol": "DataTransferService",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 83,
+      "symbol": "DataTransferService.request(with:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/DataTransferService.swift",
+      "line": 89,
+      "symbol": "DataTransferService.request(with:progressHandler:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 11,
+      "symbol": "ResponseDecoder",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 13,
+      "symbol": "ResponseDecoder.decode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 16,
+      "symbol": "JSONResponseDecoder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 20,
+      "symbol": "JSONResponseDecoder.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 22,
+      "symbol": "JSONResponseDecoder.decode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 27,
+      "symbol": "RawDataResponseDecoder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 29,
+      "symbol": "RawDataResponseDecoder.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Decoders.swift",
+      "line": 35,
+      "symbol": "RawDataResponseDecoder.decode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 11,
+      "symbol": "Endpoint",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 12,
+      "symbol": "Endpoint.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 13,
+      "symbol": "Endpoint.isFullPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 14,
+      "symbol": "Endpoint.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 15,
+      "symbol": "Endpoint.headerParamaters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 16,
+      "symbol": "Endpoint.queryParametersEncodable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 17,
+      "symbol": "Endpoint.queryParameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 18,
+      "symbol": "Endpoint.bodyParamatersEncodable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 19,
+      "symbol": "Endpoint.bodyParamaters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 20,
+      "symbol": "Endpoint.bodyEncoding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Endpoint.swift",
+      "line": 21,
+      "symbol": "Endpoint.responseDecoder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Error.swift",
+      "line": 31,
+      "symbol": "ErrorCode.cancelled",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Error.swift",
+      "line": 42,
+      "symbol": "ErrorCode.==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 11,
+      "symbol": "HTTPMethod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 13,
+      "symbol": "HTTPMethod.connect",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 14,
+      "symbol": "HTTPMethod.delete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 15,
+      "symbol": "HTTPMethod.get",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 16,
+      "symbol": "HTTPMethod.head",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 17,
+      "symbol": "HTTPMethod.options",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 18,
+      "symbol": "HTTPMethod.patch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 19,
+      "symbol": "HTTPMethod.post",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 20,
+      "symbol": "HTTPMethod.put",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/HTTPMethod.swift",
+      "line": 21,
+      "symbol": "HTTPMethod.trace",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/JSON.swift",
+      "line": 30,
+      "symbol": "JSONDecoder.DateDecodingStrategy.custom",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/JSON.swift",
+      "line": 45,
+      "symbol": "JSONEncoder.DateEncodingStrategy.custom",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 11,
+      "symbol": "NetworkConfigProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 13,
+      "symbol": "NetworkConfigProtocol.baseURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 14,
+      "symbol": "NetworkConfigProtocol.headers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 15,
+      "symbol": "NetworkConfigProtocol.queryParameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 18,
+      "symbol": "NetworkConfig",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 20,
+      "symbol": "NetworkConfig.baseURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 21,
+      "symbol": "NetworkConfig.headers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 22,
+      "symbol": "NetworkConfig.queryParameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkConfig.swift",
+      "line": 24,
+      "symbol": "NetworkConfig.init(baseURL:headers:queryParameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 11,
+      "symbol": "NetworkErrorLoggerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 13,
+      "symbol": "NetworkErrorLoggerProtocol.log(request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 14,
+      "symbol": "NetworkErrorLoggerProtocol.log(responseData:response:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 15,
+      "symbol": "NetworkErrorLoggerProtocol.log(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 18,
+      "symbol": "NetworkErrorLogger",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 20,
+      "symbol": "NetworkErrorLogger.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 22,
+      "symbol": "NetworkErrorLogger.log(request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 34,
+      "symbol": "NetworkErrorLogger.log(responseData:response:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 41,
+      "symbol": "NetworkErrorLogger.log(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 11,
+      "symbol": "NetworkError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 13,
+      "symbol": "NetworkError.error(statusCode:data:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 51,
+      "symbol": "NetworkCancellable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 53,
+      "symbol": "NetworkCancellable.cancel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 58,
+      "symbol": "ProgressHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 60,
+      "symbol": "NetworkSessionManagerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 62,
+      "symbol": "NetworkSessionManagerProtocol.CompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 64,
+      "symbol": "NetworkSessionManagerProtocol.request(request:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 68,
+      "symbol": "NetworkSessionManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 82,
+      "symbol": "NetworkSessionManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 86,
+      "symbol": "NetworkSessionManager.request(request:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 94,
+      "symbol": "NetworkSessionManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 96,
+      "symbol": "NetworkSessionManager.urlSession(_:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 106,
+      "symbol": "NetworkServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 108,
+      "symbol": "NetworkServiceProtocol.CompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 110,
+      "symbol": "NetworkServiceProtocol.request(endpoint:completion:progressHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 115,
+      "symbol": "NetworkService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 121,
+      "symbol": "NetworkService.init(config:sessionManager:logger:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 168,
+      "symbol": "NetworkService",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkService.swift",
+      "line": 170,
+      "symbol": "NetworkService.request(endpoint:completion:progressHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 11,
+      "symbol": "BodyEncoding",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 13,
+      "symbol": "BodyEncoding.jsonSerializationData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 14,
+      "symbol": "BodyEncoding.stringEncodingAscii",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 20,
+      "symbol": "Requestable.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 21,
+      "symbol": "Requestable.isFullPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 22,
+      "symbol": "Requestable.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 23,
+      "symbol": "Requestable.headerParamaters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 24,
+      "symbol": "Requestable.queryParametersEncodable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 25,
+      "symbol": "Requestable.queryParameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 26,
+      "symbol": "Requestable.bodyParamatersEncodable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 27,
+      "symbol": "Requestable.bodyParamaters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 28,
+      "symbol": "Requestable.bodyEncoding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 30,
+      "symbol": "Requestable.urlRequest(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 100,
+      "symbol": "ResponseRequestable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 101,
+      "symbol": "ResponseRequestable.Response",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Requestable.swift",
+      "line": 103,
+      "symbol": "ResponseRequestable.responseDecoder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital"
+}
