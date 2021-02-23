@@ -7,7 +7,7 @@ clean: false
 # exclude: [SparkDigital/**]
 # include: [PresentationLogic/**]
 
-readme: README.md
+# readme: README.md
 
 skip_undocumented: true
 hide_documentation_coverage: false
@@ -16,8 +16,7 @@ xcodebuild_arguments: [-workspace, SparkDigital.xcworkspace, -scheme, Core]
 
 # jazzy \
 #   --module Core \
-#   --output docs/core \
-#   --documentation=*md
+#   --output docs/core 
 
 # jazzy \
 #   --module PresentationLogic \
