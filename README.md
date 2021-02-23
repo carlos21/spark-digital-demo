@@ -10,6 +10,7 @@ This is a demo project for Spark Digital.
 - Added gesture to dismiss a photo detail
 - Only when accessing a photo detail, it requests the bigger version of it.
 - The photos layout changed according to the iOS device
+- Works on iPhone or iPad
 - Works on iOS 11 or above
 
 ## Code coverage
