@@ -8,16 +8,19 @@
 - The photos layout changed according to the iOS device
 
 ## Code coverage
-Core target: 45.6%
-Presentation Logic target: 58.8%
+
+- Core target: 45.6%
+- Presentation Logic target: 58.8%
 
 ## Performance
-It's free of memory leaks
-Uses lazy loading to improve performance
+
+- It's free of memory leaks
+- Uses lazy loading to improve performance
 
 ## Documentation
-The documentation was generated using Jazzy
-You can check it here:
+
+- The documentation was generated using Jazzy
+- You can check it here:
 https://carlos21.github.io/spark-digital-demo/core/index.html
 https://carlos21.github.io/spark-digital-demo/presentation-logic/index.html
 
