@@ -348,8 +348,6 @@
 				3533C78225E43FE10070A568 /* Infraestructure */,
 				350D925625E07081004A22B6 /* Core.h */,
 				350D925725E07081004A22B6 /* Info.plist */,
-				350D934425E07B75004A22B6 /* API.swift */,
-				350D93A925E0CCCA004A22B6 /* Environment.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -532,6 +530,8 @@
 			isa = PBXGroup;
 			children = (
 				35EC6BDB25E2DD40007E1A1C /* Repositories */,
+				350D93A925E0CCCA004A22B6 /* Environment.swift */,
+				350D934425E07B75004A22B6 /* API.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
