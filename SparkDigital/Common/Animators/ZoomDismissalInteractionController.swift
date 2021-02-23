@@ -148,7 +148,7 @@ extension ZoomDismissalInteractionController: UIViewControllerInteractiveTransit
         self.fromReferenceImageViewFrame = fromReferenceImageViewFrame
         self.toReferenceImageViewFrame = toReferenceImageViewFrame
         
-        let referenceImage = fromReferenceImageView.image!
+        let referenceImage = fromReferenceImageView.image
         
         containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
         if animator.transitionImageView == nil {
