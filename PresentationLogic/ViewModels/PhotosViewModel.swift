@@ -15,8 +15,12 @@ public class PhotosViewModel {
     // MARK: - Properties
     
     private var photosRepository: PhotosRepositoryProtocol
-    public var state = DelegatedCall<ListState>()
+    private var state: ListState = .idle
+    
     public var photoUpdated = DelegatedCall<(photo: PhotoVM, indexPath: IndexPath)>()
+    public var showListLoading = DelegatedCall<Void>()
+    public var showListSuccess = DelegatedCall<Void>()
+    public var showListError = DelegatedCall<String>()
     public var photos = [PhotoVM]()
     
     // MARK: - Init
@@ -34,7 +38,7 @@ public class PhotosViewModel {
     ///     - type: Type of loading
     public func loadData(type: LoadingType) {
         if type == .firstTimeLoad {
-            state.callback?(.loading)
+            state = .loading
         }
         photosRepository.getPhotos { [weak self] result in
             guard let self = self else { return }
@@ -47,10 +51,12 @@ public class PhotosViewModel {
                             thumbnailState: .idle,
                             bigImageState: .idle)
                 }
-                self.state.callback?(.success)
+                self.state = .success
+                self.showListSuccess.callback?(())
                 
             case .failure:
-                self.state.callback?(.error(R.string.localizable.loadingError()))
+                self.state = .error
+                self.showListError.callback?((R.string.localizable.loadingError()))
             }
         }
     }
@@ -65,6 +71,7 @@ public class PhotosViewModel {
         
         photo.thumbnailState = .loading
         photoUpdated.callback?((photo, indexPath))
+        showListLoading.callback?(())
         photosRepository.downloadPhoto(path: photo.thumbnailUrl) { [weak self] result in
             switch result {
             case .success(let data):

@@ -19,7 +19,7 @@ public enum ListState {
     case success
     
     /// The was an error getting the list
-    case error(String)
+    case error
 }
 
 public enum PhotoState {

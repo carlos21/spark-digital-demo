@@ -67,32 +67,26 @@ final class PhotosViewController: UIViewController, IndicatableController {
     }
     
     private func setupBindings() {
-        viewModel.state.delegate(to: self) { (self, state) in
-            self.showIndicator(visible: .hide, type: .fullScreen)
-            
-            switch state {
-            case .idle:
-                break
-                
-            case .loading:
-                self.activityIndicatorView.startAnimating()
-                
-            case .success:
-                self.activityIndicatorView.stopAnimating()
-                self.refreshControl.endRefreshing()
-                self.collectionView.reloadData()
-                
-            case .error(let message):
-                let settings = IndicatorView.Settings(title: "",
-                                                      message: message,
-                                                      image: nil,
-                                                      buttonTitle: R.string.localizable.retry()) { [weak self] in
-                    self?.viewModel.loadData(type: .firstTimeLoad)
-                }
-                self.activityIndicatorView.stopAnimating()
-                self.refreshControl.endRefreshing()
-                self.showIndicator(visible: .show(settings), type: .fullScreen)
+        viewModel.showListLoading.delegate(to: self) { (self, _) in
+            self.activityIndicatorView.startAnimating()
+        }
+        
+        viewModel.showListSuccess.delegate(to: self) { (self, _) in
+            self.activityIndicatorView.stopAnimating()
+            self.refreshControl.endRefreshing()
+            self.collectionView.reloadData()
+        }
+        
+        viewModel.showListError.delegate(to: self) { (self, message) in
+            let settings = IndicatorView.Settings(title: "",
+                                                  message: message,
+                                                  image: nil,
+                                                  buttonTitle: R.string.localizable.retry()) { [weak self] in
+                self?.viewModel.loadData(type: .firstTimeLoad)
             }
+            self.activityIndicatorView.stopAnimating()
+            self.refreshControl.endRefreshing()
+            self.showIndicator(visible: .show(settings), type: .fullScreen)
         }
         
         viewModel.photoUpdated.delegate(to: self) { (self, data) in
@@ -107,6 +101,18 @@ final class PhotosViewController: UIViewController, IndicatableController {
         } else {
             collectionView.settings.numberOfColumns = UIDevice.current.userInterfaceIdiom == .pad ? 5 : 3
         }
+    }
+    
+    private func showPhotosPageContainer() {
+        let photoPageController = PhotoPageContainerViewController.instance()
+        navigationController?.delegate = photoPageController.transitionController
+        
+        photoPageController.transitionController.fromDelegate = self
+        photoPageController.transitionController.toDelegate = photoPageController
+        photoPageController.delegate = self
+        photoPageController.currentIndex = self.selectedIndexPath.row
+        photoPageController.photos = viewModel.photos
+        navigationController?.pushViewController(photoPageController, animated: true)
     }
     
     @objc private func didPullToRefresh() {
@@ -156,15 +162,7 @@ extension PhotosViewController: FlexibleCollectionViewLayoutDelegate {
         
         self.selectedIndexPath = indexPath
         
-        let photoPageController = PhotoPageContainerViewController.instance()
-        navigationController?.delegate = photoPageController.transitionController
-        
-        photoPageController.transitionController.fromDelegate = self
-        photoPageController.transitionController.toDelegate = photoPageController
-        photoPageController.delegate = self
-        photoPageController.currentIndex = self.selectedIndexPath.row
-        photoPageController.photos = viewModel.photos
-        navigationController?.pushViewController(photoPageController, animated: true)
+        showPhotosPageContainer()
     }
 }
 
