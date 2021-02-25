@@ -1,6 +1,34 @@
 {
   "warnings": [
     {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Data/API.swift",
+      "line": 10,
+      "symbol": "API",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Data/API.swift",
+      "line": 12,
+      "symbol": "API",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Data/API.swift",
+      "line": 22,
+      "symbol": "API",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Data/Environment.swift",
+      "line": 10,
+      "symbol": "Environment",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Data/Repositories/PhotosRepository.swift",
       "line": 19,
       "symbol": "PhotosRepository.init(transferService:)",
@@ -47,13 +75,6 @@
       "line": 11,
       "symbol": "DownloadPhotoCompletionHandler",
       "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Environment.swift",
-      "line": 10,
-      "symbol": "Environment",
-      "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
@@ -142,6 +163,13 @@
     },
     {
       "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Error.swift",
+      "line": 11,
+      "symbol": "RequestGenerationError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/Error.swift",
       "line": 31,
       "symbol": "ErrorCode.cancelled",
       "symbol_kind": "source.lang.swift.decl.var.static",
@@ -201,6 +229,13 @@
       "line": 18,
       "symbol": "NetworkErrorLogger",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/Core/Infraestructure/Network/NetworkLogger.swift",
+      "line": 46,
+      "symbol": "printIfDebug(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {

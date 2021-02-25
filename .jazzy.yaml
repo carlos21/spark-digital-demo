@@ -1,9 +1,9 @@
-module: Core
+module: SparkDigital
 author: Carlos Duclos
 github_url: https://github.com/carlos21/spark-digital-demo
 
 theme: fullwidth
-clean: false
+clean: true
 # exclude: [SparkDigital/**]
 # include: [PresentationLogic/**]
 
@@ -12,12 +12,16 @@ clean: false
 skip_undocumented: true
 hide_documentation_coverage: false
 
-xcodebuild_arguments: [-workspace, SparkDigital.xcworkspace, -scheme, Core]
+xcodebuild_arguments: [-workspace, SparkDigital.xcworkspace, -scheme, SparkDigital]
 
 # jazzy \
 #   --module Core \
-#   --output docs/core 
+#   --output docs/core \
+#   --min-acl private \
+#   --min-acl internal
 
 # jazzy \
 #   --module SparkDigital \
-#   --output docs/presentation
+#   --output docs/presentation \
+#   --min-acl private \
+#   --min-acl internal
