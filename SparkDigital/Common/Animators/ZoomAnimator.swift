@@ -16,6 +16,16 @@ protocol ZoomAnimatorDelegate: class {
     func referenceImageViewFrameInTransitioningView(for zoomAnimator: ZoomAnimator) -> CGRect?
 }
 
+extension ZoomAnimatorDelegate {
+    
+    func transitionWillStartWith(zoomAnimator: ZoomAnimator) {
+    }
+    
+    func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
+    }
+}
+
+/// This object contains the main logic for the zoom in/out animation
 class ZoomAnimator: NSObject {
     
     // MARK: - Properties
@@ -28,6 +38,10 @@ class ZoomAnimator: NSObject {
     
     // MARK: - Functions
     
+    /// This method is called to start animating a photo when going to the photo detail
+    /// Uses the fromDelegate and toDelegate objects to extract information from the view controllers involved in the transition
+    /// - Parameters:
+    ///     - transitionContext: object with information about the elements involved in the ttransition
     fileprivate func animateZoomInTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
@@ -85,6 +99,10 @@ class ZoomAnimator: NSObject {
         })
     }
     
+    /// This method is called to start animating a photo when going from the photo detail to the list
+    /// Uses the fromDelegate and toDelegate objects to extract information from the view controllers involved in the transition
+    /// - Parameters:
+    ///     - transitionContext: object with information about the elements involved in the ttransition
     fileprivate func animateZoomOutTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
@@ -137,6 +155,10 @@ class ZoomAnimator: NSObject {
         })
     }
     
+    /// Calculates the final CGRect when zooming in
+    /// - Parameters:
+    ///     - image: image used for the animation
+    ///     - view: parent view
     private func calculateZoomInImageFrame(image: UIImage, forView view: UIView) -> CGRect {
         let viewRatio = view.frame.size.width / view.frame.size.height
         let imageRatio = image.size.width / image.size.height
@@ -155,14 +177,17 @@ class ZoomAnimator: NSObject {
 }
 
 extension ZoomAnimator: UIViewControllerAnimatedTransitioning {
+    
+    /// Asks your animator object for the duration (in seconds) of the transition animation.
+    /// - Parameters:
+    ///     - transitionContext: object with information about the elements involved in the ttransition
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        if self.isPresenting {
-            return 0.5
-        } else {
-            return 0.25
-        }
+        return self.isPresenting ? 0.5 : 0.25
     }
     
+    /// Tells your animator object to perform the transition animations.
+    /// - Parameters:
+    ///     - transitionContext: object with information about the elements involved in the ttransition
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         if self.isPresenting {
             animateZoomInTransition(using: transitionContext)

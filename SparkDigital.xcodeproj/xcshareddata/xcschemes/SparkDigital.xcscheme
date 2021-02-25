@@ -39,9 +39,9 @@
          </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "350D931825E079BD004A22B6"
-            BuildableName = "PresentationLogic.framework"
-            BlueprintName = "PresentationLogic"
+            BlueprintIdentifier = "350D91C525E05A43004A22B6"
+            BuildableName = "SparkDigital.app"
+            BlueprintName = "SparkDigital"
             ReferencedContainer = "container:SparkDigital.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>

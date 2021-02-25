@@ -8,25 +8,25 @@
 import Foundation
 
 /// Holds the properties of a photo and the states
-public class PhotoVM {
+class PhotoVM {
     
     /// Title
-    public let title: String
+    let title: String
     
     /// URL of the big image
-    public let url: String
+    let url: String
     
     /// Thumbnail url
-    public let thumbnailUrl: String
+    let thumbnailUrl: String
     
     /// Thumbnail state
-    public var thumbnailState: PhotoState
+    var thumbnailState: PhotoState
     
     /// Big image state
-    public var bigImageState: PhotoState
+    var bigImageState: PhotoState
     
     /// Quick accessor to get the thumbnail image data
-    public var thumbnailData: Data? {
+    var thumbnailData: Data? {
         switch thumbnailState {
         case .success(let data):
             return data
@@ -37,7 +37,7 @@ public class PhotoVM {
     }
     
     /// Quick accessor to get the big image data
-    public var bigImageData: Data? {
+    var bigImageData: Data? {
         switch bigImageState {
         case .success(let data):
             return data
@@ -47,6 +47,7 @@ public class PhotoVM {
         }
     }
     
+    /// Initializer
     init(title: String, url: String, thumbnailUrl: String, thumbnailState: PhotoState, bigImageState: PhotoState) {
         self.title = title
         self.url = url

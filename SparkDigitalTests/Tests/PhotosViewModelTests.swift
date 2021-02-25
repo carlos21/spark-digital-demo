@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import SparkDigital
-@testable import PresentationLogic
 @testable import Core
 
 class PhotosViewModelTests: XCTestCase {
@@ -23,54 +22,67 @@ class PhotosViewModelTests: XCTestCase {
     func testFirstTimePhotosShouldSetSuccessState() throws {
         let mockRepository = MockPhotosRepository()
         let viewModel = PhotosViewModel(photosRepository: mockRepository)
-        var timesToEnter = 0
+        var states: [ListState] = []
+        let expectation = self.expectation(description: "Should load the photos")
         
-        viewModel.state.delegate(to: self) { (self, state) in
-            timesToEnter += 1
-            
-            if timesToEnter == 1 {
-                XCTAssert(state == .loading, "State should be loading first")
-                return
-            }
-            
-            if timesToEnter == 2 {
-                XCTAssert(state == .success, "State should be success")
-                XCTAssert(viewModel.photos.count == 17, "Not all photos were loaded")
-                return
-            }
+        viewModel.showListLoading.delegate(to: self) { (self, _) in
+            states.append(.loading)
+        }
+        
+        viewModel.showListSuccess.delegate(to: self) { (self, _) in
+            states.append(.success)
+            XCTAssert(states == [.loading, .success], "States are wrong")
+            expectation.fulfill()
+        }
+        
+        viewModel.showListError.delegate(to: self) { (self, _) in
+            XCTFail("It should load successfully")
         }
         
         viewModel.loadData(type: .firstTimeLoad)
+        
+        wait(for: [expectation], timeout: 0.1)
     }
     
     func testPullToRefreshPhotosShouldSetSuccessState() {
         let mockRepository = MockPhotosRepository()
         let viewModel = PhotosViewModel(photosRepository: mockRepository)
-        viewModel.state.delegate(to: self) { (self, state) in
-            XCTAssert(state == .success, "State should be success")
+        let expectation = self.expectation(description: "Should load the photos")
+        
+        viewModel.showListSuccess.delegate(to: self) { (self, _) in
+            expectation.fulfill()
         }
         
+        viewModel.showListError.delegate(to: self) { (self, _) in
+            XCTFail("It should load successfully")
+        }
+
         viewModel.loadData(type: .pullToRefresh)
+        wait(for: [expectation], timeout: 0.1)
     }
-    
+
     func testWhenFailedStateShouldSetToError() {
         let mockRepository = MockPhotosRepository(shouldFail: true)
         let viewModel = PhotosViewModel(photosRepository: mockRepository)
-        var timesToEnter = 0
-        
-        viewModel.state.delegate(to: self) { (self, state) in
-            timesToEnter += 1
-            
-            if timesToEnter == 1 {
-                XCTAssert(state == .loading, "State should be loading first")
-                return
-            }
-            
-            if timesToEnter == 2 {
-                XCTAssert(state == .error(""), "State should be error")
-            }
+        var states: [ListState] = []
+        let expectation = self.expectation(description: "Should NOT load the photos")
+
+        viewModel.showListLoading.delegate(to: self) { (self, _) in
+            states.append(.loading)
         }
+        
+        viewModel.showListSuccess.delegate(to: self) { (self, _) in
+            XCTFail("It should not load")
+        }
+        
+        viewModel.showListError.delegate(to: self) { (self, _) in
+            states.append(.error)
+            XCTAssert(states == [.loading, .error], "States are wrong")
+            expectation.fulfill()
+        }
+        
         viewModel.loadData(type: .firstTimeLoad)
+        wait(for: [expectation], timeout: 0.1)
     }
     
     func testDownloadPhotoShouldSuccess() {

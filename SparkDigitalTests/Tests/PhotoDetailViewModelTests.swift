@@ -7,7 +7,7 @@
 
 import Foundation
 import XCTest
-@testable import PresentationLogic
+@testable import SparkDigital
 @testable import Core
 
 class PhotoDetailViewModelTests: XCTestCase {
