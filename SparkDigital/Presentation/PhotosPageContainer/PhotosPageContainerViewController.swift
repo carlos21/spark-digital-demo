@@ -7,18 +7,17 @@
 
 import Foundation
 import UIKit
-import PresentationLogic
 
 protocol PhotoPageContainerViewControllerDelegate: class {
     
     func containerViewController(_ containerViewController: PhotoPageContainerViewController, indexDidUpdate currentIndex: Int)
 }
 
-final class PhotoPageContainerViewController: UIViewController, UIGestureRecognizerDelegate {
+/// Acts as the container for each photo detail
+/// - Allows the user to swipe horizontally and navigate through the photos more easily
+final class PhotoPageContainerViewController: UIViewController {
 
     // MARK: - Properties
-    
-    var currentMode: ScreenMode = .normal
     
     weak var delegate: PhotoPageContainerViewControllerDelegate?
     
@@ -30,7 +29,7 @@ final class PhotoPageContainerViewController: UIViewController, UIGestureRecogni
         return self.pageViewController.viewControllers![0] as! PhotoDetailViewController
     }
     
-    var photos: [PhotoVM]!
+    var photos: [PhotoItemViewModel]!
     var currentIndex = 0
     var nextIndex: Int?
     var panGestureRecognizer: UIPanGestureRecognizer!
@@ -40,38 +39,27 @@ final class PhotoPageContainerViewController: UIViewController, UIGestureRecogni
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+    }
+    
+    /// Sets up the UI when the users enters the screen
+    /// Creates the UIPageViewController and the first PhotoDetailViewController
+    /// Creates the gesture to dismiss this screen
+    private func setupUI() {
         self.pageViewController.delegate = self
         self.pageViewController.dataSource = self
         self.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanWith(gestureRecognizer:)))
-        self.panGestureRecognizer.delegate = self
         self.pageViewController.view.addGestureRecognizer(self.panGestureRecognizer)
         
-        let detailController = PhotoDetailViewController.instance(photo: photos[currentIndex])
+        let detailController = PhotoDetailViewController.instance(photo: photos[currentIndex].photo)
         detailController.index = currentIndex
         
         let viewControllers = [detailController]
         self.pageViewController.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
     }
     
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if let gestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
-            let velocity = gestureRecognizer.velocity(in: self.view)
-            var velocityCheck: Bool = false
-            
-            if UIDevice.current.orientation.isLandscape {
-                velocityCheck = velocity.x < 0
-            } else {
-                velocityCheck = velocity.y < 0
-            }
-            
-            if velocityCheck {
-                return false
-            }
-        }
-        return true
-    }
-    
+    /// This function is called when it detects a pan gesture
+    /// Tells the transition controller to start animating the photo when closing
     @objc func didPanWith(gestureRecognizer: UIPanGestureRecognizer) {
         switch gestureRecognizer.state {
         case .began:
@@ -90,52 +78,56 @@ final class PhotoPageContainerViewController: UIViewController, UIGestureRecogni
             }
         }
     }
-    
-    @objc func didSingleTapWith(gestureRecognizer: UITapGestureRecognizer) {
-        if self.currentMode == .full {
-            changeScreenMode(to: .normal)
-            self.currentMode = .normal
-        } else {
-            changeScreenMode(to: .full)
-            self.currentMode = .full
-        }
-    }
-    
-    func changeScreenMode(to: ScreenMode) {
-        navigationController?.setNavigationBarHidden(to == .full, animated: false)
-    }
 }
 
 extension PhotoPageContainerViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
+    /// Returns the view controller before the given view controller.
+    /// - Parameters
+    ///     - pageViewController: page controller instance
+    ///     - viewController: current PhotoDetailViewController instance
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if currentIndex == 0 {
             return nil
         }
         
-        let photoDetailController = PhotoDetailViewController.instance(photo: photos[currentIndex - 1])
+        let photoDetailController = PhotoDetailViewController.instance(photo: photos[currentIndex - 1].photo)
         photoDetailController.index = currentIndex - 1
         return photoDetailController
     }
     
+    /// Returns the view controller after the given view controller.
+    /// - Parameters
+    ///     - pageViewController: page controller instance
+    ///     - viewController: current PhotoDetailViewController instance
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if currentIndex == (self.photos.count - 1) {
             return nil
         }
         
-        let photoDetailController = PhotoDetailViewController.instance(photo: photos[currentIndex + 1])
+        let photoDetailController = PhotoDetailViewController.instance(photo: photos[currentIndex + 1].photo)
         photoDetailController.index = currentIndex + 1
         return photoDetailController
     }
     
+    /// Called before a gesture-driven transition begins.
+    /// - Parameters
+    ///     - pageViewController: page controller instance
+    ///     - pendingViewControllers: The view controllers that are being transitioned to.
     func pageViewController(_ pageViewController: UIPageViewController,
                             willTransitionTo pendingViewControllers: [UIViewController]) {
         guard let nextVC = pendingViewControllers.first as? PhotoDetailViewController else { return }
         self.nextIndex = nextVC.index
     }
     
+    /// Called before a gesture-driven transition begins.
+    /// - Parameters
+    ///     - pageViewController: page controller instance
+    ///     - finished: true if the animation finished; otherwise, false.
+    ///     - previousViewControllers: The view controllers prior to the transition.
+    ///     - completed: true if the user completed the page-turn gesture; otherwise, false
     func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
@@ -151,34 +143,25 @@ extension PhotoPageContainerViewController: UIPageViewControllerDelegate, UIPage
 
 extension PhotoPageContainerViewController: ZoomAnimatorDelegate {
     
-    func transitionWillStartWith(zoomAnimator: ZoomAnimator) {
-    }
-    
-    func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
-    }
-    
+    /// Returns an image view used when zooming in o zooming out
+    /// - Parameters
+    ///     - zoomAnimator: instance of the object that contains the logic to perform the animation
     func referenceImageView(for zoomAnimator: ZoomAnimator) -> UIImageView? {
         return self.currentViewController.imageView
     }
     
+    /// Returns an CGRect used when zooming in o zooming out
+    /// - Parameters
+    ///     - zoomAnimator: instance of the object that contains the logic to perform the animation
     func referenceImageViewFrameInTransitioningView(for zoomAnimator: ZoomAnimator) -> CGRect? {
         return self.currentViewController.imageView.frame
-//        return self.currentViewController.scrollView.convert(self.currentViewController.imageView.frame,
-//                                                             to: self.currentViewController.view)
     }
 }
 
 extension PhotoPageContainerViewController: InstantiableController {
     
+    /// Creates an instance using the storyboard
     static func instance() -> PhotoPageContainerViewController {
         return R.storyboard.photosPageContainer.instantiateInitialViewController()!
-    }
-}
-
-extension PhotoPageContainerViewController {
-    
-    enum ScreenMode {
-        
-        case full, normal
     }
 }

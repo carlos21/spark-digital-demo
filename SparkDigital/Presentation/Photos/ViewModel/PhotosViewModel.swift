@@ -10,22 +10,22 @@ import Core
 
 /// Contains the logic to list the photos
 /// Transforms the data received by the server handling the states for each photo. The photos are download as the user scrolls down to improve performance
-public class PhotosViewModel {
+class PhotosViewModel {
     
     // MARK: - Properties
     
     private var photosRepository: PhotosRepositoryProtocol
     private var state: ListState = .idle
     
-    public var photoUpdated = DelegatedCall<(photo: PhotoVM, indexPath: IndexPath)>()
-    public var showListLoading = DelegatedCall<Void>()
-    public var showListSuccess = DelegatedCall<Void>()
-    public var showListError = DelegatedCall<String>()
-    public var photos = [PhotoVM]()
+    var photoUpdated = DelegatedCall<(photo: PhotoVM, indexPath: IndexPath)>()
+    var showListLoading = DelegatedCall<Void>()
+    var showListSuccess = DelegatedCall<Void>()
+    var showListError = DelegatedCall<String>()
+    var photos = [PhotoItemViewModel]()
     
     // MARK: - Init
     
-    public init(photosRepository: PhotosRepositoryProtocol) {
+    init(photosRepository: PhotosRepositoryProtocol) {
         self.photosRepository = photosRepository
     }
     
@@ -36,20 +36,23 @@ public class PhotosViewModel {
     /// This method is called when the users access the app for first time or when they pull the list to refresh
     /// - Parameters:
     ///     - type: Type of loading
-    public func loadData(type: LoadingType) {
+    func loadData(type: LoadingType) {
         if type == .firstTimeLoad {
             state = .loading
         }
+        
+        self.showListLoading.callback?(())
         photosRepository.getPhotos { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let photos):
                 self.photos = photos.map {
-                    PhotoVM(title: $0.title,
-                            url: $0.url,
-                            thumbnailUrl: $0.thumbnailUrl,
-                            thumbnailState: .idle,
-                            bigImageState: .idle)
+                    let photo = PhotoVM(title: $0.title,
+                                        url: $0.url,
+                                        thumbnailUrl: $0.thumbnailUrl,
+                                        thumbnailState: .idle,
+                                        bigImageState: .idle)
+                    return PhotoItemViewModel(photo: photo)
                 }
                 self.state = .success
                 self.showListSuccess.callback?(())
@@ -66,12 +69,11 @@ public class PhotosViewModel {
     /// - Parameters:
     ///     - photo: reference to the photo
     ///     - indexPath: position of the photo in the array
-    public func download(photo: PhotoVM, indexPath: IndexPath) {
+    func download(photo: PhotoVM, indexPath: IndexPath) {
         guard photo.thumbnailState.shouldDownload else { return }
         
         photo.thumbnailState = .loading
         photoUpdated.callback?((photo, indexPath))
-        showListLoading.callback?(())
         photosRepository.downloadPhoto(path: photo.thumbnailUrl) { [weak self] result in
             switch result {
             case .success(let data):
@@ -89,12 +91,12 @@ public class PhotosViewModel {
 
 extension PhotosViewModel {
     
-    public enum LoadingType {
+    enum LoadingType {
         
-        /// The user manually pulls the list to refresh
+        /// Type to indicate that the user manually pulls the list to refresh
         case pullToRefresh
         
-        /// The user enters the screen for the first time
+        /// Type to indicate that the user enters the screen for the first time
         case firstTimeLoad
     }
 }

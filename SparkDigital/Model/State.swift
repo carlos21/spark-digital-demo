@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ListState {
+enum ListState {
     
     /// No actions yet
     case idle
@@ -22,7 +22,7 @@ public enum ListState {
     case error
 }
 
-public enum PhotoState {
+enum PhotoState {
     
     /// No actions yet
     case idle

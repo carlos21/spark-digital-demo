@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import SparkDigital
-@testable import PresentationLogic
 @testable import Core
 
 class PhotosViewModelTests: XCTestCase {

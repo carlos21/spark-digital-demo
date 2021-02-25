@@ -9,23 +9,33 @@ import Foundation
 import Core
 
 /// Contains the logic to show the bigger image on a separate screen
-public class PhotoDetailViewModel {
+class PhotoDetailViewModel {
     
     // MARK: - Properties
     
+    /// Hold the object to call the list of photos web service
     private var photosRepository: PhotosRepositoryProtocol
-    public var photoUpdated = DelegatedCall<PhotoVM>()
-    public var photo: PhotoVM?
+    
+    /// Notifies when the download status of the big version of the photo was changed
+    var photoUpdated = DelegatedCall<PhotoVM>()
+    
+    /// Holds the current selected photo
+    var photo: PhotoVM?
     
     // MARK: - Init
     
-    public init(photosRepository: PhotosRepositoryProtocol) {
+    
+    /// Initializes the view model
+    /// - Parameters:
+    ///     - photosRepository: repository implementation to call the list of photos web service
+    init(photosRepository: PhotosRepositoryProtocol) {
         self.photosRepository = photosRepository
     }
     
     /// Downloads the bigger version of the photo
-    /// Validates if the photo was already downloaded or not
-    public func download() {
+    /// If only starts downloading the bigger version of the photo, if it wasn't downloaded yet
+    /// When the photo downloads, it changes the state according to the server's response
+    func download() {
         if let photo = self.photo, case PhotoState.success = photo.bigImageState {
             photoUpdated.callback?(photo)
             return

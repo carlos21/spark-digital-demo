@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 import SnapKit
-import PresentationLogic
 import Core
 
+/// This screen shows the biggest version of the photo
+/// - It's contained within a UIPageViewController
+/// - It only downloads a photo when accessing to it. If it was already downloaded, it just shows it
 final class PhotoDetailViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -25,11 +27,12 @@ final class PhotoDetailViewController: UIViewController {
     var rightConstraint: Constraint!
     var leftConstraint: Constraint!
     
+    /// Holds the current select image
     var image: UIImage? {
         guard let data = viewModel.photo?.bigImageState.data else { return nil }
         return UIImage(data: data)
     }
-    
+
     lazy var viewModel: PhotoDetailViewModel = {
         let transferService = AppContainer.shared.dataTransferService
         let photosRepository = PhotosRepository(transferService: transferService)
@@ -44,22 +47,13 @@ final class PhotoDetailViewController: UIViewController {
         setupBindings()
         viewModel.download()
     }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            self.topConstraint.activate()
-            self.bottomConstraint.activate()
-            self.rightConstraint.deactivate()
-            self.leftConstraint.deactivate()
-        } else {
-            self.topConstraint.deactivate()
-            self.bottomConstraint.deactivate()
-            self.rightConstraint.activate()
-            self.leftConstraint.activate()
-        }
+        updatePhotoConstraints()
     }
     
+    /// Sets up the UI when the users enters the screen
     private func setupUI() {
         imageView.contentMode = .scaleAspectFit
         imageView.image = self.image
@@ -74,6 +68,7 @@ final class PhotoDetailViewController: UIViewController {
         }
     }
     
+    /// Starts listening photo events
     private func setupBindings() {
         viewModel.photoUpdated.delegate(to: self) { (self, photo) in
             switch photo.bigImageState {
@@ -90,16 +85,37 @@ final class PhotoDetailViewController: UIViewController {
             }
         }
     }
+    
+    /// Checks the device orientation to always show the photo as a square at the center
+    /// If it's landscape, we keep the top and button constraints
+    /// If it's portrait, we keep the right and left constraints
+    private func updatePhotoConstraints() {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            self.topConstraint.activate()
+            self.bottomConstraint.activate()
+            self.rightConstraint.deactivate()
+            self.leftConstraint.deactivate()
+        } else {
+            self.topConstraint.deactivate()
+            self.bottomConstraint.deactivate()
+            self.rightConstraint.activate()
+            self.leftConstraint.activate()
+        }
+    }
 }
 
 extension PhotoDetailViewController: InstantiableController {
     
+    /// Creates an instance using the storyboard
     static func instance() -> PhotoDetailViewController {
         return R.storyboard.photoDetail.instantiateInitialViewController()!
     }
     
+    /// Creates an instance using the storyboard
+    /// - Parameters
+    ///     - photo: photo object that contains the data and the states to control the download
     static func instance(photo: PhotoVM) -> PhotoDetailViewController {
-        let controller = R.storyboard.photoDetail.instantiateInitialViewController()!
+        let controller = instance()
         controller.viewModel.photo = photo
         return controller
     }

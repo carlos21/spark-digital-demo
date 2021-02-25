@@ -9,10 +9,14 @@ import Foundation
 import UIKit
 import Core
 
+/// Default implementation for the app
 final class AppContainer {
     
+    /// Singleton implementation
     static let shared = AppContainer()
     
+    /// Defines the default transfer service to use in the app
+    /// Holds the default base url, headers and app version
     var dataTransferService: DataTransferService {
         let config = NetworkConfig(baseURL: Environment.dev.baseUrl,
                                    headers: [
@@ -22,10 +26,4 @@ final class AppContainer {
         let apiDataNetwork = NetworkService(config: config)
         return DataTransferService(with: apiDataNetwork)
     }
-    
-    lazy var imageDataTransferService: DataTransferService = {
-        let config = NetworkConfig(baseURL: URL(string: "")!)
-        let imagesDataNetwork = NetworkService(config: config)
-        return DataTransferService(with: imagesDataNetwork)
-    }()
 }

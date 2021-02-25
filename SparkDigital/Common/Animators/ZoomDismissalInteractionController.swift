@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// This objecf contains the logic for the animation between the PhotosViewController and the PhotoPageContainerViewController
 class ZoomDismissalInteractionController: NSObject {
     
     // MARK: - Properties
@@ -19,6 +20,9 @@ class ZoomDismissalInteractionController: NSObject {
     
     // MARK: - Functions
     
+    /// Contains the logic animation when swiping down in order to dismiss the photo detail
+    /// - Parameters
+    ///     - gestureRecognizer: object with information about the performed gesture
     func didPanWith(gestureRecognizer: UIPanGestureRecognizer) {
         
         guard let transitionContext = self.transitionContext,
@@ -37,7 +41,7 @@ class ZoomDismissalInteractionController: NSObject {
         
         let anchorPoint = CGPoint(x: fromReferenceImageViewFrame.midX, y: fromReferenceImageViewFrame.midY)
         let translatedPoint = gestureRecognizer.translation(in: fromReferenceImageView)
-        let verticalDelta : CGFloat = translatedPoint.y < 0 ? 0 : translatedPoint.y
+        let verticalDelta: CGFloat = translatedPoint.y < 0 ? 0 : translatedPoint.y
 
         let backgroundAlpha = backgroundAlphaFor(view: fromVC.view, withPanningVerticalDelta: verticalDelta)
         let scale = scaleFor(view: fromVC.view, withPanningVerticalDelta: verticalDelta)
@@ -106,6 +110,9 @@ class ZoomDismissalInteractionController: NSObject {
         }
     }
     
+    /// Calculates the alpha according to how far the photo detail is from the center
+    /// - Parameters
+    ///     - view: instance of the view where the alpha will be applied
     func backgroundAlphaFor(view: UIView, withPanningVerticalDelta verticalDelta: CGFloat) -> CGFloat {
         let startingAlpha:CGFloat = 1.0
         let finalAlpha: CGFloat = 0.0
@@ -115,6 +122,10 @@ class ZoomDismissalInteractionController: NSObject {
         return startingAlpha - (deltaAsPercentageOfMaximun * totalAvailableAlpha)
     }
     
+    /// Calculates the scale according to how much the view moved from the original position
+    /// - Parameters
+    ///     - view: instance of the view to be scaled
+    ///     - verticalDelta: distance that the object has moved from the original position
     func scaleFor(view: UIView, withPanningVerticalDelta verticalDelta: CGFloat) -> CGFloat {
         let startingScale:CGFloat = 1.0
         let finalScale: CGFloat = 0.5
@@ -127,6 +138,9 @@ class ZoomDismissalInteractionController: NSObject {
 
 extension ZoomDismissalInteractionController: UIViewControllerInteractiveTransitioning {
     
+    /// Called when the system needs to set up the interactive portions of a view controller transition and start the animations.
+    /// - Parameters
+    ///     - transitionContext: The context object containing information about the transition.
     func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         

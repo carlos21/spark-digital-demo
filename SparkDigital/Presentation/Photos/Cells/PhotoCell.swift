@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-import PresentationLogic
 
+/// Represents a cell for a photo in the list
 class PhotoCell: FlexibleBaseCell {
     
     // MARK: - IBOutlets
@@ -21,31 +21,5 @@ class PhotoCell: FlexibleBaseCell {
         cornerRadius = 5.0
         corners = .all
         imageView.contentMode = .scaleAspectFit
-    }
-    
-    func setup(photo: PhotoVM) {
-        switch photo.thumbnailState {
-        case .idle:
-            imageView.image = nil
-            
-        case .loading:
-            break
-            
-        case .success(let data):
-            animate(photo: data)
-            
-        case .error:
-            imageView.image = nil
-        }
-    }
-    
-    private func animate(photo: Data) {
-        UIView.transition(
-            with: imageView,
-            duration: 0.15,
-            options: .transitionCrossDissolve,
-            animations: { [weak self] in
-                self?.imageView.image = UIImage(data: photo)
-            }, completion: nil)
     }
 }
