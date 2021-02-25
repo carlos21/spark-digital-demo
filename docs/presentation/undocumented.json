@@ -1,29 +1,15 @@
 {
   "warnings": [
     {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Animators/ZoomAnimator.swift",
-      "line": 157,
-      "symbol": "ZoomAnimator",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Animators/ZoomDismissalInteractionController.swift",
-      "line": 128,
-      "symbol": "ZoomDismissalInteractionController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Animators/ZoomTransitionController.swift",
-      "line": 35,
+      "line": 36,
       "symbol": "ZoomTransitionController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Animators/ZoomTransitionController.swift",
-      "line": 64,
+      "line": 77,
       "symbol": "ZoomTransitionController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -134,6 +120,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Helper/DelegatedCall.swift",
+      "line": 10,
+      "symbol": "Callback",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Helper/DelegatedCall.swift",
+      "line": 12,
+      "symbol": "DelegatedCall",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/Helper/DelegatedCall.swift",
+      "line": 26,
+      "symbol": "DelegatedReturnCall",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Common/NibDesignableView.swift",
       "line": 11,
       "symbol": "NibDesignableProtocol",
@@ -183,58 +190,16 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/PhotoDetail/PhotoDetailViewController.swift",
-      "line": 94,
-      "symbol": "PhotoDetailViewController",
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Model/State.swift",
+      "line": 62,
+      "symbol": "PhotoState",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/Photos/PhotosViewController.swift",
-      "line": 117,
-      "symbol": "PhotosViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/Photos/PhotosViewController.swift",
-      "line": 124,
-      "symbol": "PhotosViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/Photos/PhotosViewController.swift",
-      "line": 171,
-      "symbol": "PhotosViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/Photos/PhotosViewController.swift",
-      "line": 180,
-      "symbol": "PhotosViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/PhotosPageContainer/PhotosPageContainerViewController.swift",
-      "line": 109,
-      "symbol": "PhotoPageContainerViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/PhotosPageContainer/PhotosPageContainerViewController.swift",
-      "line": 152,
-      "symbol": "PhotoPageContainerViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Presentation/PhotosPageContainer/PhotosPageContainerViewController.swift",
-      "line": 171,
-      "symbol": "PhotoPageContainerViewController",
+      "file": "/Users/carlosduclos/Developer/Companies/SparkDigital/SparkDigital/SparkDigital/Model/State.swift",
+      "line": 84,
+      "symbol": "ListState",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     }

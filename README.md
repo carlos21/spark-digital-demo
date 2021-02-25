@@ -19,7 +19,7 @@ Uses lazy loading to improve performance
 The documentation was generated using Jazzy
 You can check it here:
 https://carlos21.github.io/spark-digital-demo/core/index.html
-https://carlos21.github.io/spark-digital-demo/presentation-logic/index.html
+https://carlos21.github.io/spark-digital-demo/presentation/index.html
 
 
 Thanks for reading!
