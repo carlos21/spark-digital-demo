@@ -13,11 +13,6 @@ This is a demo project for Spark Digital.
 - Works on iPhone or iPad
 - Works on iOS 11 or above
 
-## Code coverage
-
-- Core target: 45.6%
-- Presentation Logic target: 58.8%
-
 ## Performance
 
 - It's free of memory leaks
@@ -27,8 +22,8 @@ This is a demo project for Spark Digital.
 
 - The documentation was generated using Jazzy
 - You can check it here:
-https://carlos21.github.io/spark-digital-demo/core/index.html
-https://carlos21.github.io/spark-digital-demo/presentation-logic/index.html
+* https://carlos21.github.io/spark-digital-demo/presentation/index.html
+* https://carlos21.github.io/spark-digital-demo/core/index.html
 
 
 Thanks for reading!
