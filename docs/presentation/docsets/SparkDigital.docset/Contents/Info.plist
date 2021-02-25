@@ -3,11 +3,11 @@
 <plist version="1.0">
   <dict>
     <key>CFBundleIdentifier</key>
-      <string>com.jazzy.presentationlogic</string>
+      <string>com.jazzy.sparkdigital</string>
     <key>CFBundleName</key>
-      <string>PresentationLogic</string>
+      <string>SparkDigital</string>
     <key>DocSetPlatformFamily</key>
-      <string>presentationlogic</string>
+      <string>sparkdigital</string>
     <key>isDashDocset</key>
       <true/>
     <key>dashIndexFilePath</key>

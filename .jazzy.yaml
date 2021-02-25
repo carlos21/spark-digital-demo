@@ -19,5 +19,5 @@ xcodebuild_arguments: [-workspace, SparkDigital.xcworkspace, -scheme, Core]
 #   --output docs/core 
 
 # jazzy \
-#   --module PresentationLogic \
-#   --output docs/presentation-logic
+#   --module SparkDigital \
+#   --output docs/presentation
