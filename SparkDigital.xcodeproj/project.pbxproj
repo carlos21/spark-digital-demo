@@ -407,6 +407,24 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		353F05D025E76E4E00E60554 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E6025E1CFB100A9DFB4 /* PhotoDetailViewController.swift */,
+				35EA4E7C25E1D8B000A9DFB4 /* PhotoDetail.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		353F05D325E76E5D00E60554 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				35EA4E4925E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift */,
+				35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		3559229425E55E5600C95508 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,8 +567,7 @@
 		35EA4E4825E1CE9100A9DFB4 /* PhotosPageContainer */ = {
 			isa = PBXGroup;
 			children = (
-				35EA4E4925E1CEA200A9DFB4 /* PhotosPageContainerViewController.swift */,
-				35EA4E7425E1D80900A9DFB4 /* PhotosPageContainer.storyboard */,
+				353F05D325E76E5D00E60554 /* ViewController */,
 			);
 			path = PhotosPageContainer;
 			sourceTree = "<group>";
@@ -558,9 +575,8 @@
 		35EA4E5F25E1CFA500A9DFB4 /* PhotoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				353F05D025E76E4E00E60554 /* ViewController */,
 				35A568D325E6B75C0046629A /* ViewModel */,
-				35EA4E6025E1CFB100A9DFB4 /* PhotoDetailViewController.swift */,
-				35EA4E7C25E1D8B000A9DFB4 /* PhotoDetail.storyboard */,
 			);
 			path = PhotoDetail;
 			sourceTree = "<group>";
